@@ -1,0 +1,75 @@
+// SVG ANIMATION-----------------------------------
+.st1 {
+  stroke-dasharray: 521.4798583984375;
+  stroke-dashoffset: 521.4798583984375;
+  animation: dash 3s linear forwards;
+}
+
+.st2 {
+  stroke-dasharray: 716.0350341796875;
+  stroke-dashoffset: 716.0350341796875;
+  animation: dash 3s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+// HEADER---------------------------------------------
+header {
+  padding: 1.5em;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: map-get($theme-colors, 'primary-bg');
+  z-index: 100;
+}
+
+.logo {
+  width: 3em;
+  height: 3em;
+}
+
+.menu-icon {
+  color: map-get($font-colors, 'primary');
+  font-size: 2em;
+}
+
+nav {
+  flex: 1 100%;
+  display: none;
+  margin-top: 1em;
+  padding: 1em 0;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 0;
+  }
+
+  a {
+    color: map-get($font-colors, 'primary');
+  }
+}
+
+.nav-mobile {
+  display: block;
+}
+
+.nav-animation {
+  animation: navMenu 2s forwards;
+}
+
+@keyframes navMenu {
+  to {
+    height: 6.125em - 1.5em;
+  }
+}

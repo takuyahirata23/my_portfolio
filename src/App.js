@@ -1,13 +1,24 @@
-import React from 'react';
-// import logo from './logo.svg';
-import './sass/App.scss';
+import React, { Component } from 'react'
+import './sass/App.scss'
+import { BrowserRouter, Route } from 'react-router-dom'
+import Header from './components/Header'
+import Home from './components/Home'
+import Work from './components/Work'
+import Profile from './components/Profile'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>hello</h1>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <Header />
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/work" component={Work}/>
+          <Route exact path="/profile" component={Profile}/>
+        </div>
+      </BrowserRouter>
+    )
+  }
 }
 
 export default App;
