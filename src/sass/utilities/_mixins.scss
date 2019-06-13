@@ -1,5 +1,30 @@
+@mixin card-border($w: 1px, $type: solid, $color: map-get($theme-colors, 'card-border')) {
+  border: $w $type $color;
+}
+
+@mixin flex($wrap: null, $just: null, $align: null) {
+  display: flex;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  align-items: $align;
+  @content;
+}
+
+@mixin square($color) {
+  &::before {
+    content: '';
+    position: absolute;
+    top: em(8px);
+    left: em(-15.5px);
+    width: em(8px);
+    height: em(8px);
+    background-color: $color;
+    @content;
+  }
+}
+
 @mixin mq($breakpoint) {
   @media(min-width: map-get($breakpoints, $breakpoint)) {
-    @content
+    @content;
   }
 }

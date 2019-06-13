@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
 class Header extends Component {
@@ -44,9 +45,9 @@ class Header extends Component {
         </div>
         <nav className={this.state.isClicked ? 'nav-mobile' : ''}>
           <ul className={this.state.isClicked ? 'nav-animation' : ''}>
-            <li><a href="/home">HOME</a></li>
-            <li><a href="/work">WORK</a></li>
-            <li><a href="/profile">PROFILE</a></li>
+            <li><NavLink exact to="/">HOME</NavLink></li>
+            <li><NavLink to="/work">WORK</NavLink></li>
+            <li><NavLink to="/profile">PROFILE</NavLink></li>
           </ul>
         </nav>
       </header>

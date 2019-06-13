@@ -1,0 +1,28 @@
+.selections-wrapper {
+  @include flex(wrap, flex-start, center);
+
+  .choice {
+    position: relative;
+    padding: em(5px) em(8px);
+    left: em(8px);
+    margin-left: em(6.2px);
+    margin-right: em(20px);
+    margin-bottom: em(10px);
+  }
+}
+
+.all {
+  @include square(map-get($selection-colors, 'all'));
+}
+
+.react {
+  @include square(map-get($selection-colors, 'react'));
+}
+
+.node {
+  @include square(map-get($selection-colors, 'node'));
+}
+
+.database {
+  @include square(map-get($selection-colors, 'database'));
+}

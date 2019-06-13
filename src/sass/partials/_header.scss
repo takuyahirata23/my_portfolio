@@ -19,44 +19,41 @@
 
 // HEADER---------------------------------------------
 header {
-  padding: 1.5em;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: map-get($theme-colors, 'primary-bg');
-  z-index: 100;
+  @include flex(wrap, space-between, center) {
+    padding: em(20px);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: map-get($theme-colors, 'primary-bg');
+    z-index: 100;
+  }
 }
 
 .logo {
-  width: 3em;
-  height: 3em;
+  width: em(40px);
+  height: em(40px);
 }
 
 .menu-icon {
   color: map-get($font-colors, 'primary');
-  font-size: 2em;
+  font-size: em(28px);
 }
 
 nav {
   flex: 1 100%;
   display: none;
-  margin-top: 1em;
-  padding: 1em 0;
+  margin-top: em(20px);
 
   ul {
-    display: flex;
-    justify-content: space-between;
+    @include flex(wrap, space-between, center);
     overflow: hidden;
     height: 0;
   }
 
   a {
     color: map-get($font-colors, 'primary');
+    padding: em(5px) em(8px);
   }
 }
 
@@ -65,11 +62,11 @@ nav {
 }
 
 .nav-animation {
-  animation: navMenu 2s forwards;
+  animation: navMenu .5s forwards;
 }
 
 @keyframes navMenu {
   to {
-    height: 6.125em - 1.5em;
+    height: em(40px);
   }
 }

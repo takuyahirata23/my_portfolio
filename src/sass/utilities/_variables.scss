@@ -2,6 +2,8 @@ $font-colors: (
   'primary': #fff
 );
 
+$base-font-size: 16px;
+
 $fonts: (
   'primary': 'Heebo',
   'secondary': 'Roboto Condensed'
@@ -11,6 +13,13 @@ $theme-colors: (
   'primary-bg': #2A2929,
   'card-border': #fff,
   'border': #D8D8D8,
+);
+
+$selection-colors: (
+  'all': #4425B7,
+  'react': #B72525,
+  'node': #3CB725,
+  'database': #FCCE1B,
 );
 
 $breakpoints : (
