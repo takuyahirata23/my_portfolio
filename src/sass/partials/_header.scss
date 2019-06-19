@@ -43,12 +43,16 @@ header {
 nav {
   flex: 1 100%;
   display: none;
-  margin-top: em(20px);
+  z-index: 100;
 
   ul {
-    @include flex(wrap, space-between, center);
+    @include flex(wrap, space-around, center);
+    // @include card-border;
+    height: 100vh;
+    background-color: map-get($theme-colors, 'primary-bg');
     overflow: hidden;
     height: 0;
+    margin-top: 20px;
   }
 
   a {
@@ -67,6 +71,8 @@ nav {
 
 @keyframes navMenu {
   to {
-    height: em(40px);
+    // transform: translateX(-290px);
+    height: em(100px);
   }
 }
+

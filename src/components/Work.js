@@ -22,7 +22,7 @@ class Work extends Component {
         name: 'database'
       }
     ],
-    works: 'hi'
+    works: []
   }
 
   componentDidMount() {
@@ -56,7 +56,17 @@ class Work extends Component {
           <Selection selections={this.state.selections} handleSelection={this.handleSelection}/>
         </section>
         <section className="works">
-          Works will be here
+          <div className="outer-box">
+            <div className="inner-box">
+              <div className="project-name">MY EDUCATION</div>
+            </div>
+          </div>
+
+          <div className="outer-box">
+            <div className="inner-box">
+              <div className="project-name">SECOND ONE</div>
+            </div>
+          </div>
         </section>
       </div>
     )
