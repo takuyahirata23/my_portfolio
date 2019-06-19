@@ -20,6 +20,7 @@
 // HEADER---------------------------------------------
 header {
   @include flex(wrap, space-between, center) {
+    border-bottom: 1px solid map-get($theme-colors, 'border');
     padding: em(20px);
     width: 100%;
     position: fixed;
@@ -27,6 +28,7 @@ header {
     left: 0;
     background-color: map-get($theme-colors, 'primary-bg');
     z-index: 100;
+    overflow: hidden;
   }
 }
 
@@ -41,18 +43,24 @@ header {
 }
 
 nav {
-  flex: 1 100%;
-  display: none;
-  z-index: 100;
+  @include flex(wrap, space-between, center);
 
   ul {
-    @include flex(wrap, space-around, center);
-    // @include card-border;
+    @include card-border;
+    position: fixed;
+    top: 60.2px;
+    right: -576px;
     height: 100vh;
+    width: 70vw;
+    padding: em(30px);
     background-color: map-get($theme-colors, 'primary-bg');
     overflow: hidden;
-    height: 0;
     margin-top: 20px;
+
+    li {
+      margin-bottom: em(30px);
+      text-align: center;
+    }
   }
 
   a {
@@ -65,14 +73,26 @@ nav {
   display: block;
 }
 
-.nav-animation {
-  animation: navMenu .5s forwards;
+.nav-animation-plus {
+  animation: navMenuPlus .5s forwards;
 }
 
-@keyframes navMenu {
+.nav-animation-minus {
+  animation: navMenuMinus .5s forwards;
+}
+
+@keyframes navMenuPlus {
   to {
-    // transform: translateX(-290px);
-    height: em(100px);
+    transform: translateX(-576px);
+  }
+}
+
+@keyframes navMenuMinus {
+  from {
+    transform: translateX(-576px);
+  }
+  to {
+    transform: translateX(0px);
   }
 }
 

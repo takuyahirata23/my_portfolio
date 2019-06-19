@@ -40,11 +40,11 @@ class Header extends Component {
           c2.75,0,4.98-2.23,4.98-4.98S75.95,25.42,73.19,25.42z" />
         </svg>
         </div>
-        <div onClick={this.handleNav}>
-          {this.state.isClicked ? <FaTimes className="menu-icon"/> : <FaBars className="menu-icon"/>}
-        </div>
-        <nav className={this.state.isClicked ? 'nav-mobile' : ''}>
-          <ul className={this.state.isClicked ? 'nav-animation' : ''}>
+        <nav>
+          <div onClick={this.handleNav}>
+            {this.state.isClicked ? <FaTimes className="menu-icon"/> : <FaBars className="menu-icon"/>}
+          </div>
+          <ul className={this.state.isClicked ? 'nav-animation-plus' : 'nav-animation-minus'}>
             <li><NavLink exact to="/">HOME</NavLink></li>
             <li><NavLink to="/work">WORK</NavLink></li>
             <li><NavLink to="/profile">PROFILE</NavLink></li>
