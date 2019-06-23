@@ -35,9 +35,21 @@
   grid-template-columns: repeat(auto-fill, em(150px));
   grid-gap: em(20px);
 }
+
+.work-description {
+  font-size: em(17px);
+  line-height: 1.5;
+  margin-bottom: em(12px);
+}
+
+.selections-wrapper {
+  @include border;
+}
+
 .outer-box {
   @include card-border;
   @include flex($just: center, $align: center);
+  background-color: map-get($theme-colors, 'card-background');
   border-radius: 8px 8px;
   height: em(220px);
 }
@@ -51,21 +63,10 @@
 }
 
 .project-name {
-  @include card-border;
   font-family: map-get($fonts, 'secondary');
   text-align: center;
   width: 80%;
-  transform: rotate(-10deg) skew(-10deg);
+  color: map-get($font-colors, 'tertiary');
+  // transform: rotate(-10deg) skew(-10deg);
   padding: 5px 2px;
-}
-
-.outer-box:hover, .inner-box:hover {
-  box-shadow:
-  0 0 0.1vw  0.4vw #f8f7ff,   
-  0 0 0.4vw  0.6vw #7276e9, 
-  0 0   4vw  0.4vw #280be5,
-  inset 0 0 1.5vw  0.4vw #1d0be5,
-  inset 0 0 0.4vw  0.2vw #8272e9,
-  inset 0 0 0.5vw  0.2vw #f9f7ff;
-  // display: none;
 }

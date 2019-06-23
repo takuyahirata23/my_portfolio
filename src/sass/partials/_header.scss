@@ -26,7 +26,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: map-get($theme-colors, 'primary-bg');
+    background-color: map-get($theme-colors, 'secondary-bg');
     z-index: 100;
     overflow: hidden;
   }
@@ -38,7 +38,7 @@ header {
 }
 
 .menu-icon {
-  color: map-get($font-colors, 'primary');
+  color: map-get($font-colors, 'secondary');
   font-size: em(28px);
 }
 

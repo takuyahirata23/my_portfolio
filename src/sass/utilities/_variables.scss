@@ -1,25 +1,30 @@
 $font-colors: (
-  'primary': #fff
+  'primary': #000000,
+  'secondary': #FFFFFF,
+  'tertiary': #ffd28c
 );
 
 $base-font-size: 16px;
 
 $fonts: (
-  'primary': 'Heebo',
-  'secondary': 'Roboto Condensed'
+  'primary': 'montserrat',
+  // 'secondary': 'Roboto Condensed'
 );
 
 $theme-colors: (
-  'primary-bg': #2A2929,
-  'card-border': #fff,
-  'border': #D8D8D8,
+  'primary-bg': #FFFFFF,
+  'secondary-bg': #1c1259,
+  'border': #cacaea,
+  'card-border': #ff9b00,
+  'card-background': #1c1259,
+  'accent-light': #eda506,
 );
 
 $selection-colors: (
-  'all': #4425B7,
-  'react': #B72525,
-  'node': #3CB725,
-  'database': #FCCE1B,
+  'all': #494949,
+  'react': #0d8fb7,
+  'node': #0c8e63,
+  'database': #eda506,
 );
 
 $breakpoints : (

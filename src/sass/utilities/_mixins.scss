@@ -2,6 +2,10 @@
   border: $w $type $color;
 }
 
+@mixin border {
+  border-bottom: 1px solid map-get($theme-colors, 'border');
+}
+
 @mixin flex($wrap: null, $just: null, $align: null) {
   display: flex;
   flex-wrap: $wrap;

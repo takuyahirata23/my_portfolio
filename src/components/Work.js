@@ -51,11 +51,15 @@ class Work extends Component {
 
   render() {
     return (
-      <div className="section-wrapper">
-        <section className="selections">
+      <section className="section-wrapper">
+        <p className="work-description">
+          These are some projects I developed.<br />
+          If you are interested in my code, please click on a link on the project page.
+        </p>
+        <div>
           <Selection selections={this.state.selections} handleSelection={this.handleSelection}/>
-        </section>
-        <section className="works">
+        </div>
+        <div className="works">
           <div>
             <div className="outer-box">
               <div className="inner-box">
@@ -72,8 +76,8 @@ class Work extends Component {
               <div className="project-name">SECOND ONE</div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     )
   }
 }
