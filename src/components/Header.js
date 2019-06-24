@@ -41,7 +41,7 @@ class Header extends Component {
         </svg>
         </div>
         <nav>
-          <div onClick={this.handleNav}>
+          <div onClick={this.handleNav} className="hamburger-menu">
             {this.state.isClicked ? <FaTimes className="menu-icon"/> : <FaBars className="menu-icon"/>}
           </div>
           <ul className={this.state.isClicked ? 'nav-animation-plus' : 'nav-animation-minus'}>

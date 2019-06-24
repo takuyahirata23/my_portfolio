@@ -30,11 +30,29 @@ header {
     z-index: 100;
     overflow: hidden;
   }
+
+  @include mq('md') {
+    padding: em(15px) em(35px);
+  }
+
+  @include mq('lg') {
+    padding: em(20px) em(50px);
+  }
+
+  @include mq('xl') {
+    padding: em(20px) em(100px);
+  }
 }
 
 .logo {
   width: em(40px);
   height: em(40px);
+}
+
+.hamburger-menu {
+  @include mq('md') {
+    display: none;
+  }
 }
 
 .menu-icon {
@@ -57,15 +75,40 @@ nav {
     overflow: hidden;
     margin-top: 20px;
 
+    @include mq('md') {
+      @include flex(wrap, space-between, center);
+      position: static;
+      height: inherit;
+      width: inherit;
+      padding: 0;
+      background-color: inherit;
+      border: none;
+      overflow: visible;
+      margin-top: 0;
+    }
+
     li {
       margin-bottom: em(30px);
       text-align: center;
+
+      @include mq('md') {
+        margin-bottom: 0;
+        margin-left: em(20px);
+      } 
+
+      @include mq('lg') {
+        margin-left: em(30px);
+      } 
     }
   }
 
   a {
     color: map-get($font-colors, 'primary');
     padding: em(5px) em(8px);
+
+    @include mq('md') {
+      color: map-get($font-colors, 'secondary');
+    }
   }
 }
 

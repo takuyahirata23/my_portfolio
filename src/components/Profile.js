@@ -22,6 +22,36 @@ const Profile = () => {
       </div>
       <div className="profile-todo">
         <h2>As A Developer</h2>
+        <div className="todo-list-wrapper">
+          <div>
+            <IoIosCode />
+            <div>
+              <h3>CODE</h3>
+              <p>Write clean, understandable, and maintainable code. Good applications need to be well organized and tested.</p>
+            </div>
+          </div>
+          <div>
+            <IoMdLaptop />
+            <div>
+              <h3>PRACTICE</h3>
+              <p>Practice what I learned, try new things to improve my skills.</p>
+            </div>
+          </div>
+          <div>
+            <IoIosBook />
+            <div>
+              <h3>LEARN</h3>
+              <p>Stay up-to-date to work build great applications. Never stop learning!</p>
+            </div>
+          </div>
+          <div>
+            <IoMdPeople />
+            <div>
+              <h3>COMMUNICATE</h3>
+              <p>Communicate with team and clients. Talk to other developers by attending meetups. It's helpful and fun!</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

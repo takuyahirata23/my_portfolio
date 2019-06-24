@@ -7,6 +7,18 @@ body {
   font-size: $base-font-size;
   background-color: map-get($theme-colors, 'primary-bg');
   font-family: map-get($fonts, 'primary');
+
+  @include mq('md') {
+    padding: em(15px) em(35px);
+  }
+
+  @include mq('lg') {
+    padding: em(20px) em(50px);
+  }
+
+  @include mq('xl') {
+    padding: em(20px) em(100px);
+  }
 }
 
 a {
@@ -20,6 +32,14 @@ a:focus {
 .section-wrapper {
   margin-top: em(70px);
   padding-top: em(20px);
+
+  @include mq('lg') {
+    margin-top: em(100px);
+  }
+
+  @include mq('lg') {
+    margin-top: em(120px);
+  }
 }
 
 .active {
