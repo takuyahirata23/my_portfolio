@@ -13,7 +13,9 @@
 }
 
 .all {
-  @include square(map-get($selection-colors, 'all'));
+  @include square(map-get($selection-colors, 'all')) {
+    border-radius: 0;
+  };
 }
 
 .react {
@@ -26,6 +28,10 @@
 
 .database {
   @include square(map-get($selection-colors, 'database'));
+}
+
+.sass {
+  @include square(map-get($selection-colors, 'sass'));
 }
 
 // WORKS------------------------------------------------
@@ -52,22 +58,49 @@
   background-color: map-get($theme-colors, 'card-background');
   border-radius: 8px 8px;
   height: em(220px);
+
+    .inner-box {
+      @include card-border;
+      @include flex($just: center, $align: center);
+      border-radius: 8px 8px;
+      height: 92%;
+      width: 88%;
+
+        .project-name {
+          font-family: map-get($fonts, 'secondary');
+          text-align: center;
+          width: 80%;
+          color: map-get($font-colors, 'card');
+          padding: 5px 2px;
+        }
+    }
 }
 
-.inner-box {
-  @include card-border;
-  @include flex($just: center, $align: center);
-  border-radius: 8px 8px;
-  height: 92%;
-  width: 88%;
+.tools {
+  margin-top: em(10px);
+  @include grid (repeat(auto-fit, em(10px))) {
+    grid-column-gap: em(5px);
+    justify-content: center;
+  };
+  & > span {
+    display: inline-block;
+    width: em(10px);
+    height: em(10px);
+    border-radius: 100%;
+  }
+
+  & .react {
+    background-color: map-get($selection-colors, 'react');
+  }
+
+  & .node {
+    background-color: map-get($selection-colors, 'node');
+  }
+
+  & .database {
+    background-color: map-get($selection-colors, 'node');
+  }
 }
 
-.project-name {
-  font-family: map-get($fonts, 'secondary');
-  text-align: center;
-  width: 80%;
-  color: map-get($font-colors, 'card');
-  // transform: rotate(-10deg) skew(-10deg);
-  padding: 5px 2px;
-}
+
 

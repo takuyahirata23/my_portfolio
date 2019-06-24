@@ -4,7 +4,7 @@
     "name": "YOKOHAMA",
     "overview": "Branding a snowboarding store.",
     "Objective": "Build a responsive website that delivers great UI/UX. Design websites and create all of the assets using Illustrator and Photoshop.",
-    "tools": ["HTML", "CSS", "JavaScript", "Illustrator", "Photoshop"],
+    "tools": ["React", "Database", "JavaScript", "Illustrator", "Photoshop"],
     "links": {
       "project": "http://takuyahirata.com/yokohama",
       "git": "https://github.com/Takuya-H23"

@@ -9,6 +9,7 @@
 @mixin grid($column: null) {
   display: grid;
   grid-template-columns: $column; 
+  @content;
 }
 
 @mixin flex($wrap: null, $just: null, $align: null) {
@@ -28,6 +29,7 @@
     width: em(8px);
     height: em(8px);
     background-color: $color;
+    border-radius: 100%;
     @content;
   }
 }

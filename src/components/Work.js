@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Selection from './Selection'
 import works from './../works.json'
+import Cards from './Cards'
 
 class Work extends Component {
   state = {
@@ -8,6 +9,10 @@ class Work extends Component {
       {
         isClicked: true,
         name: 'all'
+      },
+      {
+        isClicked: false,
+        name: 'sass'
       },
       {
         isClicked: false,
@@ -20,7 +25,7 @@ class Work extends Component {
       {
         isClicked: false,
         name: 'database'
-      }
+      },
     ],
     works: []
   }
@@ -59,24 +64,7 @@ class Work extends Component {
         <div>
           <Selection selections={this.state.selections} handleSelection={this.handleSelection}/>
         </div>
-        <div className="works">
-          <div>
-            <div className="outer-box">
-              <div className="inner-box">
-                <div className="project-name">MY EDUCATION</div>
-              </div>
-            </div>
-            <div>
-              <span>node</span><span>react</span>
-            </div>
-          </div>
-
-          <div className="outer-box">
-            <div className="inner-box">
-              <div className="project-name">SECOND ONE</div>
-            </div>
-          </div>
-        </div>
+        <Cards works={this.state.works}/>
       </section>
     )
   }
