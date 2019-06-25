@@ -13,6 +13,12 @@ class Header extends Component {
     }))
   }
 
+  resetNav = () => {
+    this.setState({
+      isClicked: false
+    })
+  }
+
   render() {
     return (
       <header>
@@ -45,9 +51,9 @@ class Header extends Component {
             {this.state.isClicked ? <FaTimes className="menu-icon"/> : <FaBars className="menu-icon"/>}
           </div>
           <ul className={this.state.isClicked ? 'nav-animation-plus' : 'nav-animation-minus'}>
-            <li><NavLink exact to="/">HOME</NavLink></li>
-            <li><NavLink to="/work">WORK</NavLink></li>
-            <li><NavLink to="/profile">PROFILE</NavLink></li>
+            <li onClick={this.resetNav}><NavLink exact to="/">HOME</NavLink></li>
+            <li onClick={this.resetNav}><NavLink to="/work">WORK</NavLink></li>
+            <li onClick={this.resetNav}><NavLink to="/profile">PROFILE</NavLink></li>
           </ul>
         </nav>
       </header>

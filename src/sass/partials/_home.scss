@@ -1,0 +1,55 @@
+.animation-wrapper {
+  width: 100%;
+  height: em(125px);
+  margin-top: em(20px);
+
+  @include mq('sm') {
+    height: em(250px);
+  };
+
+  @include mq('md') {
+    height: em(350px);
+  };
+
+  @include mq('lg') {
+    height: em(400px);
+  };
+
+  @include mq('xl') {
+    height: em(500px);
+  };
+}
+
+.home-msg {
+  margin-top: em(20px);
+  padding: em(20px, 15px);
+  line-height: 1.5;
+}
+
+// TESTIMONIALS--------------------------------------
+.testimonials-wrapper {
+  @include grid(1fr) {
+    grid-gap: em(30px);
+  };
+
+  .testimonial {
+    font-size: em(15px);
+    box-shadow: .5px .5px 3px rgba(0, 0, 0, .3);
+    padding: em(20px, 15px);
+
+    &-msg {
+      line-height: 1.9;
+      font-style: italic;
+      margin-top: em(2px);
+    }
+
+    h2 {
+      margin: em(20px) 0;
+    }
+
+    &-company {
+      font-size: em(13.5px);
+      line-height: 1.3;
+    }
+  }
+}

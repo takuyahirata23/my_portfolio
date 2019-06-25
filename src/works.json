@@ -1,15 +1,15 @@
 [
   {
     "id": "0",
-    "name": "YOKOHAMA",
-    "overview": "Branding a snowboarding store.",
-    "Objective": "Build a responsive website that delivers great UI/UX. Design websites and create all of the assets using Illustrator and Photoshop.",
-    "tools": ["React", "Database", "JavaScript", "Illustrator", "Photoshop"],
+    "name": "PORTFOLIO SITE",
+    "overview": "New portfolio site.",
+    "objective": "Build a responsive website that delivers great UI/UX. Design websites and create all of the assets using Illustrator and Photoshop.",
+    "tools": ["Sass", "JavaScript", "React", "Sketch", "Photoshop", "Illustrator"],
     "links": {
-      "project": "http://takuyahirata.com/yokohama",
-      "git": "https://github.com/Takuya-H23"
+      "project": "http://takuyahirata.com",
+      "git": "https://github.com/Takuya-H23/my_portfolio"
     },
-    "date": "July 2018",
+    "date": "July 2019",
     "img": {
       "large": "../img/yokohama_large.jpg",
       "small": "../img/yokohama_small.jpg"

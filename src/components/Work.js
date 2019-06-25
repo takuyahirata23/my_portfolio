@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Selection from './Selection'
 import works from './../works.json'
 import Cards from './Cards'
@@ -64,10 +65,14 @@ class Work extends Component {
         <div>
           <Selection selections={this.state.selections} handleSelection={this.handleSelection}/>
         </div>
-        <Cards works={this.state.works}/>
+        <Cards works={this.state.works} updatePath={this.props.updatePath}/>
       </section>
     )
   }
+}
+
+Work.propTypes = {
+  updatePath: PropTypes.func.isRequired
 }
 
 export default Work

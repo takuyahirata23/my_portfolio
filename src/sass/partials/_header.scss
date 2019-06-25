@@ -116,26 +116,28 @@ nav {
   display: block;
 }
 
-.nav-animation-plus {
-  animation: navMenuPlus .5s forwards;
-}
-
-.nav-animation-minus {
-  animation: navMenuMinus .5s forwards;
-}
-
-@keyframes navMenuPlus {
-  to {
-    transform: translateX(-576px);
+@media (max-width: 768px) {
+  .nav-animation-plus {
+    animation: navMenuPlus .5s forwards;
   }
-}
-
-@keyframes navMenuMinus {
-  from {
-    transform: translateX(-576px);
+  
+  .nav-animation-minus {
+    animation: navMenuMinus .5s forwards;
   }
-  to {
-    transform: translateX(0px);
+  
+  @keyframes navMenuPlus {
+    to {
+      transform: translateX(-576px);
+    }
+  }
+  
+  @keyframes navMenuMinus {
+    from {
+      transform: translateX(-576px);
+    }
+    to {
+      transform: translateX(0px);
+    }
   }
 }
 
