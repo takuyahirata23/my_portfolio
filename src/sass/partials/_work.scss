@@ -118,18 +118,19 @@
 .detail {
   h1 {
     font-size: em(25px);
-    text-align: center;
+    margin-top: em(20px, 25px);
   }
 
   .detail-links {
-    @include grid(1fr);
     margin-top: em(30px);
-    grid-row-gap: em(18px);
-    justify-items: center;
 
     span {
       margin-right: em(8px);
       vertical-align: middle;
+    }
+
+    .last-span {
+      margin-left: em(20px);
     }
 
     .detail-icon {
@@ -140,9 +141,13 @@
   .detail-info-wrapper {
     @include grid(1fr);
     grid-row-gap: em(30px);
-    text-align: center;
     margin-top: em(40px);
-    text-align: center;
+
+    @include mq('lg') {
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: em(70px);
+      grid-column-gap: em(80px);
+    }
 
     h2 {
       font-size: em(18px);
@@ -152,16 +157,42 @@
 
     p {
       line-height: 1.5;
+
+      @include mq('lg') {
+        line-height: 2;
+      }
     }
 
     ul {
-      @include grid(repeat(auto-fit, minmax(50px, 100px)));
+      @include grid(1fr 1fr 1fr);
       grid-row-gap: em(15px);
+
+      @include mq('md') {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 150px));
+        grid-column-gap: em(20px);
+      }
+
+      @include mq('lg') {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 100px));
+      }
+    }
+  }
+
+  .link-back {
+    margin-top: em(30px);
+
+    @include mq('lg') {
+      margin-top: em(80px);
     }
 
-    // li {
-    //   margin-bottom: em(10px);
-    // }
+    span {
+      margin-left: em(10px);
+      vertical-align: middle
+    }
+
+    .back-icon {
+      vertical-align: middle;
+    }
   }
 }
 

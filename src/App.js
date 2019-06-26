@@ -34,10 +34,10 @@ class App extends Component {
           <div className="main-wrapper">
             <Switch>
               <Route exact path="/" component={Home}/>
-              <Route exact path="/work" component={() => <Work updatePath={this.updatePath}/>}/>
+              <Route exact path="/work" render={() => <Work updatePath={this.updatePath}/>}/>
               <Route path="/profile" component={Profile}/>
               {this.state.detailPath.length > 0 
-                ? <Route path={this.state.detailPath} component={() => <Details project={this.state.targetProject}/>}/>
+                ? <Route path={this.state.detailPath} render={() => <Details project={this.state.targetProject}/>}/>
                 : null
               }
               <Route component={NotFound} />

@@ -19,7 +19,7 @@ class Testimonials extends Component {
       <div className="testimonials-wrapper">
         {this.state.testimonials.map(item => (
           <div className="testimonial" key={item.name}>
-            <GoQuote />
+            <GoQuote className="quote-icon"/>
             <p className="testimonial-msg">{item.testimonial}</p>
             <h2>{item.name}</h2>
             <p className="testimonial-company">{item.company}</p>
