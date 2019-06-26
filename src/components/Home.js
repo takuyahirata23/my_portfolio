@@ -1,6 +1,6 @@
 import React from 'react'
 import Testimonial from './Testimonial'
-import pic from './../img/gsap_template.svg'
+import pic from './../img/opening_animation.svg'
 
 const Home = () => {
   return (

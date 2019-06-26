@@ -24,6 +24,10 @@
   margin-top: em(20px);
   padding: em(20px, 15px);
   line-height: 1.5;
+
+  a {
+    color: map-get($font-colors, 'tertiary');
+  }
 }
 
 // TESTIMONIALS--------------------------------------
