@@ -6,6 +6,7 @@ body {
   font-size: $base-font-size;
   background-color: map-get($theme-colors, 'primary-bg');
   font-family: map-get($fonts, 'primary');
+  max-width: 1500px;
 
 }
 

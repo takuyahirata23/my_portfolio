@@ -49,7 +49,7 @@ const Profile = () => {
             <IoIosBook />
             <div>
               <h3>LEARN</h3>
-              <p>Stay up-to-date to work build great applications. Never stop learning!</p>
+              <p>Stay up-to-date to build great applications. Never stop learning!</p>
             </div>
           </div>
           <div>

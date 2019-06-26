@@ -126,19 +126,16 @@ nav {
     animation: navMenuMinus .5s forwards;
   }
   
-  @keyframes navMenuPlus {
-    to {
-      transform: translateX(-576px);
-    }
+}
+@keyframes navMenuPlus {
+  to {
+    transform: translateX(-576px);
   }
-  
-  @keyframes navMenuMinus {
-    from {
-      transform: translateX(-576px);
-    }
-    to {
-      transform: translateX(0px);
-    }
+}
+
+@keyframes navMenuMinus {
+  to {
+    transform: translateX(0px);
   }
 }
 
