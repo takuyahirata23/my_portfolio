@@ -1,3 +1,17 @@
+Hi!
+
+Thank you for checking my code! I built this React application as a portfolio site.
+Every project has its link to live server and git repository (if it's available).
+
+Feel free to reach me out if you have any questions or you're interested in working with me.
+
+I look forward to hearing from you!
+
+Thanks!!
+
+Takuya
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
