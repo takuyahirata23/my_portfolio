@@ -58,6 +58,7 @@ header {
 .menu-icon {
   color: map-get($font-colors, 'secondary');
   font-size: em(28px);
+  cursor: pointer;
 }
 
 nav {
