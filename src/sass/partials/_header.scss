@@ -28,7 +28,6 @@ header {
     left: 0;
     background-color: map-get($theme-colors, 'secondary-bg');
     z-index: 100;
-    overflow: hidden;
   }
 
   @include mq('md') {
@@ -36,6 +35,7 @@ header {
   }
 
   @include mq('lg') {
+    overflow: hidden;
     padding: em(20px) em(50px);
   }
 
