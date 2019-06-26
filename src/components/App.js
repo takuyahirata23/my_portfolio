@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import './sass/App.scss'
+import './../sass/App.scss'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Header from './components/Header'
-import Home from './components/Home'
-import Work from './components/Work'
-import Profile from './components/Profile'
-import Footer from './components/Footer'
-import Details from './components/Details'
-import NotFound from './components/NotFound'
+import Header from './Header'
+import Home from './Home'
+import Work from './Work'
+import Profile from './Profile'
+// import Footer from './Footer'
+import Details from './Details'
+import NotFound from './NotFound'
 
 
 class App extends Component {
@@ -43,7 +43,7 @@ class App extends Component {
               <Route component={NotFound} />
             </Switch>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </BrowserRouter>
     )

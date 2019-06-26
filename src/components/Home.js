@@ -10,7 +10,7 @@ const Home = () => {
       </div>
       <p className="home-msg">
         Hi! Thank you for visiting my portfolio site.<br />
-        Feel free to check <a href="https://github.com/Takuya-H23">my code</a> and contact me if your are interested!.
+        Feel free to check <a href="https://github.com/Takuya-H23">my code</a> and <a href="mailto:takuyahirata4@gmail.com">contact</a> me if your are interested!.
       </p>
       <Testimonial />
     </div>

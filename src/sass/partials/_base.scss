@@ -35,6 +35,7 @@ a:focus {
 
 .section-wrapper {
   margin-top: em(70px);
+  margin-bottom: em(50px);
   padding-top: em(20px);
 
   @include mq('lg') {

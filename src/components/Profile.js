@@ -1,6 +1,8 @@
 import React from 'react'
 import takuya from './../img/takuya_croped.jpg'
 import { IoIosCode, IoIosBook, IoMdPeople, IoMdLaptop} from 'react-icons/io'
+import { MdContactMail } from 'react-icons/md'
+import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 
 const Profile = () => {
   return (
@@ -12,6 +14,11 @@ const Profile = () => {
           </div>
           <h1>TAKUYA HIRATA</h1>
           <p>Web Developer</p>
+          <div className="profile-links">
+            <a href="mailto:takuyahirata4@gmail.com"><MdContactMail className="profile-icon" /></a>
+            <a href="https://github.com/Takuya-H23" target="_blank" rel="noopener noreferrer"><FaGithub className="profile-icon center" /></a>
+            <a href="https://www.linkedin.com/in/takuya-hirata-1a6562169/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn className="profile-icon" /></a>
+          </div>
         </div>
         <div className="profile-msg">
           <p>While I was a student in college, my professor told me that "no websites are perfect, so always work to improve your projects and skills to do the best you can". I have decided to adopt this mentality and pursue this goal with passion.</p>
@@ -20,6 +27,7 @@ const Profile = () => {
           </p>
         </div>
       </div>
+
       <div className="profile-todo">
         <h2>As A Developer</h2>
         <div className="todo-list-wrapper">

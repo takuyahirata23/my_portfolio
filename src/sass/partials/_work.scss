@@ -9,6 +9,7 @@
     margin-left: em(6.2px);
     margin-right: em(20px);
     margin-bottom: em(10px);
+    cursor: pointer;
   }
 }
 
@@ -53,6 +54,7 @@
 
   @include mq('xl') {
     font-size: 18px;
+    margin-top: 0;
   }
 }
 

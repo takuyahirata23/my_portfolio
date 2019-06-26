@@ -8,11 +8,14 @@
 }
 
 .profile-info {
+  @include grid(1fr);
+  grid-row-gap: em(15px);
   text-align: center;
+
   .profile-picture {
     border: 1.4px solid map-get($font-colors, 'tertiary');
     width: 50%;
-    margin: 0 auto;
+    margin: em(10px) auto;
     border-radius: 100%;
     padding: em(10px);
 
@@ -34,20 +37,24 @@
 
   h1 {
     font-size: em(20px);
-    margin-top: em(20px, 20px);
 
     @include mq('xl') {
       font-size: em(30px, 20px);
-      margin-top: em(25px, 20px);
     }
   }
 
   p {
-    margin-top: em(10px);
     color: map-get($font-colors, 'tertiary');
+  }
 
-    @include mq('xl') {
-      margin-top: em(20px);
+  .profile-links {
+    .profile-icon {
+      font-size: em(25px);
+      color: map-get($font-colors, 'tertiary');
+    }
+
+    .center {
+      margin: 0 em(8px);
     }
   }
 }
@@ -105,10 +112,14 @@
   @include grid(1fr);
   margin-top: em(20px);
 
+  @include mq('md') {
+    grid-row-gap: em(20px);
+  };
+
   @include mq('lg') {
     margin-top: em(30px);
     grid-template-columns: 1fr 1fr;
-    grid-gap: em(50px);
+    grid-gap: em(30px) em(50px);
   }
 
   @include mq('xl') {
@@ -121,7 +132,7 @@
 
     @include mq('sm') {
       grid-template-columns: 1fr 7fr;
-      margin-bottom: em(30px);
+      grid-row-gap: em(30px);
     };
 
     @include mq('lg') {
