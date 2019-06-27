@@ -1,30 +1,33 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { Consumer } from './context'
 import { Link } from 'react-router-dom'
 import Tools from './Tools'
 
-const Cards = ({works, updatePath}) => (
-  <div className="works">
-    {works.map(work => (
-      <div key={work.id}>
-        <Link to={`/work/${work.name.replace(' ', '').toLowerCase()}`} onClick={() => updatePath(work.name, work)}>
-          <div className="outer-box">
-            <div className="inner-box">
-              <div className="project-name">{work.name}</div>
-            </div>
-          </div>
-        </Link>
-        <div className="tools">
-          <Tools tools={work.tools} id={work.id}/>
-        </div>
-      </div>      
-    ))}
-  </div>
-)
+const Cards = () => (
+  <Consumer>
+    {({projects, actions}) => (
+      <div className="works">
+        {projects.map(project => (
+          <div key={project.id}>
+            <Link 
+              to={`/work/${project.name.replace(' ', '').toLowerCase()}`} 
+              onClick={() => actions.updatePath(project.name, project)}
+            >
+              <div className="outer-box">
+                <div className="inner-box">
+                  <div className="project-name">{project.name}</div>
+                </div>
+              </div>
+            </Link>
 
-Cards.propTypes = {
-  works: PropTypes.array.isRequired,
-  updatePath: PropTypes.func.isRequired
-}
+            <div className="tools">
+              <Tools tools={project.tools}/>
+            </div>
+          </div>      
+        ))}
+      </div>
+    )}
+  </Consumer>
+)
 
 export default Cards
