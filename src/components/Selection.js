@@ -6,7 +6,8 @@ const Selection = () => (
     {({selections, actions}) => (
       <div className="selections-wrapper">
         {selections.map(selection => 
-        <div className={`choice ${selection.name} ${selection.isClicked? 'active': ''}`} 
+        <div 
+          className={`choice ${selection.name.toLowerCase()} ${selection.isClicked? 'active': ''}`} 
           key={selection.name}
           id={selection.name}
           onClick={actions.handleSelection}

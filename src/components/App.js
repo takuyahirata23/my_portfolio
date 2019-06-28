@@ -15,8 +15,6 @@ import NotFound from './NotFound'
 class App extends Component {
 
   state = {
-    detailPath: '',
-    detailInfo: {},
     selections: [
       {
         isClicked: true,
@@ -24,20 +22,20 @@ class App extends Component {
       },
       {
         isClicked: false,
-        name: 'sass'
+        name: 'Sass'
       },
       {
         isClicked: false,
-        name: 'react'
+        name: 'React'
       },
-      {
-        isClicked: false,
-        name: 'node'
-      },
-      {
-        isClicked: false,
-        name: 'database'
-      },
+      // {
+      //   isClicked: false,
+      //   name: 'Node'
+      // },
+      // {
+      //   isClicked: false,
+      //   name: 'Database'
+      // }
     ],
     projects: []
   }
@@ -45,15 +43,6 @@ class App extends Component {
   componentDidMount() {
     this.setState({
       projects: projects
-    })
-  }
-  
-  updatePath = (path, ob) => {
-    const targetPath = `/work/${path.replace(/\s/g, '-').toLowerCase()}`
-
-    this.setState({
-      detailPath: targetPath,
-      targetProject: ob
     })
   }
 
@@ -76,6 +65,19 @@ class App extends Component {
     }))
   }
 
+  getCurrentSelection = (selectionArray) => {
+    const selectedTool = selectionArray.filter(selection => selection.isClicked)
+    return selectedTool[0].name
+  }
+
+  filterProjects = (projectsArray, selectedTool) => {
+    if (selectedTool === 'all') {
+      return projectsArray
+    } else {
+      return projectsArray.filter(project => project.tools.includes(selectedTool))
+    }
+  }
+
   render() {
     return (
       <BrowserRouter>
@@ -83,8 +85,9 @@ class App extends Component {
           projects: this.state.projects,
           selections: this.state.selections,
           actions: {
-            updatePath: this.updatePath,
-            handleSelection: this.handleSelection
+            handleSelection: this.handleSelection,
+            getCurrentSelection: this.getCurrentSelection,
+            filterProjects: this.filterProjects
           }
         }}>
           <div className="App">

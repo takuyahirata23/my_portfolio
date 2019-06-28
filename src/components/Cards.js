@@ -5,28 +5,32 @@ import Tools from './Tools'
 
 const Cards = ({match}) => (
   <Consumer>
-    {({projects, actions}) => (
-      <div className="works">
-        {projects.map(project => (
-          <div key={project.id}>
-            <Link 
-              to={`${match.url}/${project.name.toLowerCase().replace(/\s/g, '-')}`} 
-              onClick={() => actions.updatePath(project.name, project)}
-            >
-              <div className="outer-box">
-                <div className="inner-box">
-                  <div className="project-name">{project.name}</div>
+    {({projects, selections, actions}) => {
+      
+      const selectedProjects = actions.filterProjects(projects, actions.getCurrentSelection(selections))
+   
+      return (
+        <div className="works">
+          {selectedProjects.map(project => (
+            <div key={project.id}>
+              <Link 
+                to={`${match.url}/${project.name.toLowerCase().replace(/\s/g, '-')}`} 
+              >
+                <div className="outer-box">
+                  <div className="inner-box">
+                    <div className="project-name">{project.name}</div>
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
 
-            <div className="tools">
-              <Tools tools={project.tools}/>
-            </div>
-          </div>      
-        ))}
-      </div>
-    )}
+              <div className="tools">
+                <Tools tools={project.tools}/>
+              </div>
+            </div>      
+          ))}
+        </div>
+      )
+    }}
   </Consumer>
 )
 
