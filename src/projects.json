@@ -2,8 +2,8 @@
   {
     "id": "0",
     "name": "PORTFOLIO SITE",
-    "overview": "New portfolio site using React.",
-    "objective": "Build a react application that is maintainable and well organized. Practice using React Router and Sass, and Sketch to create comps.",
+    "overview": "Portfolio site using React. ",
+    "objective": "Build a react application that is maintainable and well organized. Practice using React Router and React Context API to improve state management skills. Use Sass to style efficiently, and Sketch to create comps.",
     "tools": ["Sass", "JavaScript", "React", "Sketch", "Photoshop", "Illustrator"],
     "links": {
       "project": "http://takuyahirata.com",
