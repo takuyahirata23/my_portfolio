@@ -1,30 +1,37 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { Consumer } from './context'
 import { Link } from 'react-router-dom'
 import Tools from './Tools'
 
-const Cards = ({works, updatePath}) => (
-  <div className="works">
-    {works.map(work => (
-      <div key={work.id}>
-        <Link to={`/work/${work.name.replace(' ', '').toLowerCase()}`} onClick={() => updatePath(work.name, work)}>
-          <div className="outer-box">
-            <div className="inner-box">
-              <div className="project-name">{work.name}</div>
-            </div>
-          </div>
-        </Link>
-        <div className="tools">
-          <Tools tools={work.tools} id={work.id}/>
-        </div>
-      </div>      
-    ))}
-  </div>
-)
+const Cards = ({match}) => (
+  <Consumer>
+    {({projects, selections, actions}) => {
+      
+      const selectedProjects = actions.filterProjects(projects, actions.getCurrentSelection(selections))
+   
+      return (
+        <div className="works">
+          {selectedProjects.map(project => (
+            <div key={project.id}>
+              <Link 
+                to={`${match.url}/${project.name.toLowerCase().replace(/\s/g, '-')}`} 
+              >
+                <div className="outer-box">
+                  <div className="inner-box">
+                    <div className="project-name">{project.name}</div>
+                  </div>
+                </div>
+              </Link>
 
-Cards.propTypes = {
-  works: PropTypes.array.isRequired,
-  updatePath: PropTypes.func.isRequired
-}
+              <div className="tools">
+                <Tools tools={project.tools}/>
+              </div>
+            </div>      
+          ))}
+        </div>
+      )
+    }}
+  </Consumer>
+)
 
 export default Cards

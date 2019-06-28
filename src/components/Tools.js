@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Tools = ({tools, id}) => {
+const Tools = ({tools}) => {
   const toolsExist = ['node', 'database', 'react', 'sass'];
   const filteredTools = tools.filter(tool => toolsExist.includes(tool.toLowerCase()));
 
@@ -14,7 +14,6 @@ const Tools = ({tools, id}) => {
 
 Tools.propTypes = {
   tools: PropTypes.array.isRequired,
-  id: PropTypes.string.isRequired
 }
 
 export default Tools
