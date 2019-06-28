@@ -2,7 +2,7 @@ import React from 'react'
 import Selection from './Selection'
 import Cards from './Cards'
 
-const Work = () => {
+const Work = ({match}) => {
   return (
     <section className="section-wrapper">
       <p className="work-description">
@@ -12,7 +12,7 @@ const Work = () => {
       <div>
         <Selection />
       </div>
-      <Cards />
+      <Cards match={match}/>
     </section>
   )
 }

@@ -1,42 +1,51 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import { Consumer } from './context'
 import { Link } from 'react-router-dom'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa'
+import NotFound from './NotFound'
 
-const Details = ({project}) => (
-  <section className="section-wrapper detail">
-    <h1>{project.name}</h1>
-    <div className="detail-links">
-      <a href={project.links.git} target="_blank" rel="noopener noreferrer"><span>REPOSITORY</span><FaArrowAltCircleRight className="detail-icon"/></a>
+const Details = ({match}) => (
+  <Consumer>
+    {({projects}) => {
+      const param = match.params.project.replace(/-/g, ' ').toUpperCase()
+      const targetProject = projects.find(project => project.name === param)
 
-      <a href={project.links.project} target="_blank" rel="noopener noreferrer"><span className="last-span">PROJECT</span><FaArrowAltCircleRight className="detail-icon"/></a>
-    </div>
-    <div className="detail-info-wrapper">
-      <div>
-        <h2>OVERVIEW</h2>
-        <p>{project.overview}</p>
-      </div>
+      if(targetProject === undefined) return <NotFound />
 
-      <div>
-        <h2>OBJECTIVE</h2>
-        <p>{project.objective}</p>
-      </div>
+      return (
+        <section className="section-wrapper detail">
+          <h1>{targetProject.name}</h1>
+          <div className="detail-links">  
+            <a href={targetProject.links.git} target="_blank" rel="noopener noreferrer"><span>REPOSITORY</span><FaArrowAltCircleRight className="detail-icon"/></a>
+            <a href={targetProject.links.project} target="_blank" rel="noopener noreferrer"><span className="last-span">PROJECT</span><FaArrowAltCircleRight className="detail-icon"/></a>
+          </div>
 
-      <div className="tools-wrapper">
-        <h2>TOOLS</h2>
-        <ul>
-          {project.tools.map(tool => <li key={tool}>-{tool}</li>)}
-        </ul>
-      </div>
-    </div>
-    <div className="link-back">
-      <Link to="/work"><FaArrowAltCircleLeft className="back-icon"/><span>Back</span></Link>
-    </div>
-  </section>
+          <div className="detail-info-wrapper">
+            <div>
+              <h2>OVERVIEW</h2>
+              <p>{targetProject.overview}</p>
+            </div>
+
+            <div>
+              <h2>OBJECTIVE</h2>
+              <p>{targetProject.objective}</p>
+            </div>
+
+            <div className="tools-wrapper">
+              <h2>TOOLS</h2>
+              <ul>
+                {targetProject.tools.map(tool => <li key={tool}>-{tool}</li>)}
+              </ul>
+            </div>
+          </div>
+
+          <div className="link-back">
+            <Link to="/work"><FaArrowAltCircleLeft className="back-icon"/><span>Back</span></Link>
+          </div>
+        </section>
+      )
+    }}
+  </Consumer>
 )
-
-Details.propTypes = {
-  project: PropTypes.object.isRequired,
-}
 
 export default Details

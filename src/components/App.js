@@ -49,7 +49,7 @@ class App extends Component {
   }
   
   updatePath = (path, ob) => {
-    const targetPath = `/work/${path.replace(' ', '').toLowerCase()}`
+    const targetPath = `/work/${path.replace(/\s/g, '-').toLowerCase()}`
 
     this.setState({
       detailPath: targetPath,
@@ -94,10 +94,7 @@ class App extends Component {
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/work" component={Work}/>
                 <Route path="/profile" component={Profile}/>
-                {this.state.detailPath.length > 0 
-                  ? <Route path={this.state.detailPath} render={() => <Details project={this.state.targetProject}/>}/>
-                  : null
-                }
+                <Route path="/work/:project" component={Details}/>
                 <Route component={NotFound} />
               </Switch>
             </div>

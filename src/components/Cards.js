@@ -3,14 +3,14 @@ import { Consumer } from './context'
 import { Link } from 'react-router-dom'
 import Tools from './Tools'
 
-const Cards = () => (
+const Cards = ({match}) => (
   <Consumer>
     {({projects, actions}) => (
       <div className="works">
         {projects.map(project => (
           <div key={project.id}>
             <Link 
-              to={`/work/${project.name.replace(' ', '').toLowerCase()}`} 
+              to={`${match.url}/${project.name.toLowerCase().replace(/\s/g, '-')}`} 
               onClick={() => actions.updatePath(project.name, project)}
             >
               <div className="outer-box">
