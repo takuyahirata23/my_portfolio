@@ -112,7 +112,7 @@
   }
 
   & .database {
-    background-color: map-get($selection-colors, 'node');
+    background-color: map-get($selection-colors, 'database');
   }
 }
 

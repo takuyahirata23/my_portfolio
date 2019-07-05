@@ -24,7 +24,7 @@
     "date": "May 2019"
   },
   {
-    "id": "3",
+    "id": "2",
     "name": "PREVIOUS PORTFOLIO SITE",
     "overview": "My first portfolio site when I was a student in College.",
     "objective": "Create a responsive website that is compatible with any browsers. Write maintainable code by using modern JavaScript and Sass",
@@ -34,5 +34,17 @@
       "git": "https://github.com/Takuya-H23/portfolio"
     },
     "date": "May 2019"
+  },
+  {
+    "id": "3",
+    "name": "Q&A REST API",
+    "overview": "REST API for Q&A sites. Handles post/delete questions, answer questions, vote/edit answers. I have been developing a React app to use this API!",
+    "objective": "Build REST API using Node.js, Express.js, MongoDB and Mongoose. Practice creating schema and Model, handling errors, and providing proper data and status code.",
+    "tools": ["Node", "Express", "Database", "Mongoose"],
+    "links": {
+      "project": "null",
+      "git": "https://github.com/Takuya-H23/qa-rest"
+    },
+    "date": "June 2019"
   }
 ]

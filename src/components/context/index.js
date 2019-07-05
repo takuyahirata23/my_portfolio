@@ -19,6 +19,14 @@ export class Provider extends Component {
         isClicked: false,
         name: 'React'
       },
+      {
+        isClicked: false,
+        name: 'Node'
+      },
+      {
+        isClicked: false,
+        name: 'Database'
+      },
     ],
     projects: []
   }
