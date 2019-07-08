@@ -1,6 +1,58 @@
 [
   {
-    "id": "0",
+    "id": "1",
+    "name": "REAL TIME CHAT",
+    "overview": "Real time chat application using Socket.io and Node.js.",
+    "objective": "My first application using Socket.io. Create Node.js application and practice basic Node.js and Express skills and deploy onto liver server.",
+    "tools": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node",
+      "Express"
+    ],
+    "links": {
+      "project": "https: //chat-in-node.herokuapp.com/",
+      "git": "https://github.com/Takuya-H23/real-time-chat"
+    },
+    "date": "January 2019"
+  },
+  {
+    "id": "2",
+    "name": "PREVIOUS PORTFOLIO SITE",
+    "overview": "My first portfolio site when I was a student in College.",
+    "objective": "Create a responsive website that is compatible with any browsers. Write maintainable code by using modern JavaScript and Sass",
+    "tools": [
+      "HTML",
+      "Sass",
+      "JavaScript",
+      "Photoshop",
+      "Illustrator"
+    ],
+    "links": {
+      "project": "http://takuyahirata.com",
+      "git": "https://github.com/Takuya-H23/portfolio"
+    },
+    "date": "May 2019"
+  },
+  {
+    "id": "3",
+    "name": "MY EDUCATION",
+    "overview": "React application that displays what I have learned at college and via online programming courses. Use Treehouse API to get data.",
+    "objective": "Create an application to show what I can do and have learned. Practice using React router, and managing state.",
+    "tools": [
+      "CSS",
+      "JavaScript",
+      "React"
+    ],
+    "links": {
+      "project": "https://my-education.netlify.com/",
+      "git": "https://github.com/Takuya-H23/my_education"
+    },
+    "date": "May 2019"
+  },
+  {
+    "id": "4",
     "name": "PORTFOLIO SITE",
     "overview": "Portfolio site using React. ",
     "objective": "Build a react application that is maintainable and well organized. Practice using React Router and React Context API to improve state management skills. Use Sass to style efficiently, and Sketch to create comps.",
@@ -12,31 +64,7 @@
     "date": "July 2019"
   },
   {
-    "id": "1",
-    "name": "MY EDUCATION",
-    "overview": "React application that displays what I have learned at college and via online programming courses. Use Treehouse API to get data.",
-    "objective": "Create an application to show what I can do and have learned. Practice using React router, and managing state.",
-    "tools": ["CSS", "JavaScript", "React"],
-    "links": {
-      "project": "https://my-education.netlify.com/",
-      "git": "https://github.com/Takuya-H23/my_education"
-    },
-    "date": "May 2019"
-  },
-  {
-    "id": "2",
-    "name": "PREVIOUS PORTFOLIO SITE",
-    "overview": "My first portfolio site when I was a student in College.",
-    "objective": "Create a responsive website that is compatible with any browsers. Write maintainable code by using modern JavaScript and Sass",
-    "tools": ["HTML", "Sass", "JavaScript", "Photoshop", "Illustrator"],
-    "links": {
-      "project": "http://takuyahirata.com",
-      "git": "https://github.com/Takuya-H23/portfolio"
-    },
-    "date": "May 2019"
-  },
-  {
-    "id": "3",
+    "id": "5",
     "name": "Q&A REST API",
     "overview": "REST API for Q&A sites. Handles post/delete questions, answer questions, vote/edit answers. I have been developing a React app to use this API!",
     "objective": "Build REST API using Node.js, Express.js, MongoDB and Mongoose. Practice creating schema and Model, handling errors, and providing proper data and status code.",
