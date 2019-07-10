@@ -30,7 +30,7 @@
       "Illustrator"
     ],
     "links": {
-      "project": "http://takuyahirata.com",
+      "project": "http://dev.takuyahirata.com",
       "git": "https://github.com/Takuya-H23/portfolio"
     },
     "date": "May 2019"
@@ -42,6 +42,7 @@
     "objective": "Create an application to show what I can do and have learned. Practice using React router, and managing state.",
     "tools": [
       "CSS",
+      "Bootstrap",
       "JavaScript",
       "React"
     ],
