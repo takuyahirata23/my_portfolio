@@ -25,6 +25,7 @@ class Details extends React.Component {
               <h1>{targetProject.name}</h1>
               <div className="detail-links">  
                 <a href={targetProject.links.git} target="_blank" rel="noopener noreferrer"><span>REPOSITORY</span><FaArrowAltCircleRight className="detail-icon"/></a>
+                
                 { targetProject.links.project !== "null" 
                   ? <a href={targetProject.links.project} target="_blank" rel="noopener        noreferrer"><span className="last-span">PROJECT</span><FaArrowAltCircleRight className="detail-icon"/></a>
 
