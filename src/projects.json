@@ -1,15 +1,22 @@
 [
   {
+    "id": "6",
+    "name": "Github Finder",
+    "overview": "Github Finder to search for github users and their public repositories. As a result of developing this application, I can choose to use either Redux or useReducer and useContext for state management",
+    "objective": "To implement React hooks such as useState, useEffect, useContext and useReducer. Consider when to use Redux or Hooks for state management. Practice how to keep information such as own API keys safe",
+    "tools": ["React", "Github API"],
+    "links": {
+      "project": "https://github-finder-23.netlify.com/",
+      "git": "https://github.com/Takuya-H23/github-finder"
+    },
+    "date": "July 2019"
+  },
+  {
     "id": "5",
     "name": "Q&A REST API",
     "overview": "REST API for Q&A sites. Handles post/delete questions, answer questions, vote/edit answers.",
     "objective": "Build REST API using Node.js, Express.js, MongoDB and Mongoose. Practice creating schema and Model, handling errors, and providing proper data and status code.",
-    "tools": [
-      "Node",
-      "Express",
-      "Database",
-      "Mongoose"
-    ],
+    "tools": ["Node", "Express", "Database", "Mongoose"],
     "links": {
       "project": "null",
       "git": "https://github.com/Takuya-H23/qa-rest"
@@ -40,12 +47,7 @@
     "name": "MY EDUCATION",
     "overview": "React application that displays what I have learned at college and via online programming courses. Use Treehouse API to get data.",
     "objective": "Create an application to show what I can do and have learned. Practice using React router, and managing state.",
-    "tools": [
-      "CSS",
-      "Bootstrap",
-      "JavaScript",
-      "React"
-    ],
+    "tools": ["CSS", "Bootstrap", "JavaScript", "React"],
     "links": {
       "project": "https://my-education.netlify.com/",
       "git": "https://github.com/Takuya-H23/my_education"
@@ -57,13 +59,7 @@
     "name": "PREVIOUS PORTFOLIO SITE",
     "overview": "My first portfolio site when I was a student in College.",
     "objective": "Create a responsive website that is compatible with any browsers. Write maintainable code by using modern JavaScript and Sass",
-    "tools": [
-      "HTML",
-      "Sass",
-      "JavaScript",
-      "Photoshop",
-      "Illustrator"
-    ],
+    "tools": ["HTML", "Sass", "JavaScript", "Photoshop", "Illustrator"],
     "links": {
       "project": "http://dev.takuyahirata.com",
       "git": "https://github.com/Takuya-H23/portfolio"
@@ -75,13 +71,7 @@
     "name": "REAL TIME CHAT",
     "overview": "Real time chat application using Socket.io and Node.js.",
     "objective": "My first application using Socket.io. Create Node.js application and practice basic Node.js and Express skills and deploy onto liver server.",
-    "tools": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Node",
-      "Express"
-    ],
+    "tools": ["HTML", "CSS", "JavaScript", "Node", "Express"],
     "links": {
       "project": "https://chat-in-node.herokuapp.com/",
       "git": "https://github.com/Takuya-H23/real-time-chat"
