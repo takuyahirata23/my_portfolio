@@ -1,9 +1,9 @@
 [
   {
     "id": "6",
-    "name": "Github Finder",
-    "overview": "Github Finder to search for github users and their public repositories. As a result of developing this application, I can choose to use either Redux or useReducer and useContext for state management",
-    "objective": "To implement React hooks such as useState, useEffect, useContext and useReducer. Consider when to use Redux or Hooks for state management. Practice how to keep information such as own API keys safe",
+    "name": "GITHUB FINDER",
+    "overview": "Github Finder to search for github users and their public repositories. As a result of developing this application, I can choose to use either Redux or useReducer and useContext for state management.",
+    "objective": "To implement React hooks such as useState, useEffect, useContext and useReducer. Consider when to use Redux or Hooks for state management. Practice how to keep information such as own API keys safe.",
     "tools": ["React", "Github API"],
     "links": {
       "project": "https://github-finder-23.netlify.com/",
