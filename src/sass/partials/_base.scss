@@ -6,8 +6,8 @@ body {
   font-size: $base-font-size;
   background-color: map-get($theme-colors, 'primary-bg');
   font-family: map-get($fonts, 'primary');
-  max-width: 1500px;
-
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 a {
@@ -20,15 +20,15 @@ a:focus {
 
 .main-wrapper {
   padding: em(20px);
-  
+
   @include mq('md') {
     padding: em(15px) em(35px);
   }
-  
+
   @include mq('lg') {
     padding: em(20px) em(50px);
   }
-  
+
   @include mq('xl') {
     padding: em(20px) em(100px);
   }
