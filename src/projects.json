@@ -2,8 +2,8 @@
   {
     "id": "6",
     "name": "GITHUB FINDER",
-    "overview": "Github Finder to search for github users and their public repositories. As a result of developing this application, I can choose to use either Redux or useReducer and useContext for state management.",
-    "objective": "To implement React hooks such as useState, useEffect, useContext and useReducer. Consider when to use Redux or Hooks for state management. Practice how to keep information such as own API keys safe.",
+    "overview": "To search for github users and their public repositories. React Hooks are used for state management",
+    "objective": "To implement React Hooks such as useState, useEffect, useContext and useReducer. Consider when to use Redux or Hooks for state management. Practice how to keep information such as API keys safe.",
     "tools": ["React", "Github API"],
     "links": {
       "project": "https://github-finder-23.netlify.com/",
@@ -27,7 +27,7 @@
     "id": "4",
     "name": "PORTFOLIO SITE",
     "overview": "Portfolio site using React. ",
-    "objective": "Build a react application that is maintainable and well organized. Practice using React Router and React Context API to improve state management skills. Use Sass to style efficiently, and Sketch to create comps.",
+    "objective": "Build a react application that is maintainable and organized well. Practice using React Router and React Context API to improve state management skills. Use Sass to style efficiently, and Sketch to create comps.",
     "tools": [
       "Sass",
       "JavaScript",
@@ -46,7 +46,7 @@
     "id": "3",
     "name": "MY EDUCATION",
     "overview": "React application that displays what I have learned at college and via online programming courses. Use Treehouse API to get data.",
-    "objective": "Create an application to show what I can do and have learned. Practice using React router, and managing state.",
+    "objective": "Create an application to show my capabilities and what I have learned. Practice using React Router, and state management",
     "tools": ["CSS", "Bootstrap", "JavaScript", "React"],
     "links": {
       "project": "https://my-education.netlify.com/",
@@ -70,7 +70,7 @@
     "id": "1",
     "name": "REAL TIME CHAT",
     "overview": "Real time chat application using Socket.io and Node.js.",
-    "objective": "My first application using Socket.io. Create Node.js application and practice basic Node.js and Express skills and deploy onto liver server.",
+    "objective": "My first application using Socket.io. Create Node.js application and practice basic Node.js and Express skills and deploy onto live server.",
     "tools": ["HTML", "CSS", "JavaScript", "Node", "Express"],
     "links": {
       "project": "https://chat-in-node.herokuapp.com/",
