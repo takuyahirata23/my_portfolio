@@ -10,13 +10,18 @@
     margin-right: em(20px);
     margin-bottom: em(10px);
     cursor: pointer;
+    border: 1px solid transparent;
+
+    &.active {
+      @include card-border;
+    }
   }
 }
 
 .all {
   @include square(map-get($selection-colors, 'all')) {
     border-radius: 0;
-  };
+  }
 }
 
 .react {
@@ -69,29 +74,29 @@
   border-radius: 8px 8px;
   height: em(220px);
 
-    .inner-box {
-      @include card-border;
-      @include flex($just: center, $align: center);
-      border-radius: 8px 8px;
-      height: 92%;
-      width: 88%;
+  .inner-box {
+    @include card-border;
+    @include flex($just: center, $align: center);
+    border-radius: 8px 8px;
+    height: 92%;
+    width: 88%;
 
-        .project-name {
-          font-family: map-get($fonts, 'secondary');
-          text-align: center;
-          width: 80%;
-          color: map-get($font-colors, 'card');
-          padding: 5px 2px;
-        }
+    .project-name {
+      font-family: map-get($fonts, 'secondary');
+      text-align: center;
+      width: 80%;
+      color: map-get($font-colors, 'card');
+      padding: 5px 2px;
     }
+  }
 }
 
 .tools {
   margin-top: em(10px);
-  @include grid (repeat(auto-fit, em(10px))) {
+  @include grid(repeat(auto-fit, em(10px))) {
     grid-column-gap: em(5px);
     justify-content: center;
-  };
+  }
   & > span {
     display: inline-block;
     width: em(10px);
@@ -189,7 +194,7 @@
 
     span {
       margin-left: em(10px);
-      vertical-align: middle
+      vertical-align: middle;
     }
 
     .back-icon {
@@ -197,6 +202,3 @@
     }
   }
 }
-
-
-
