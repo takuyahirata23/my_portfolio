@@ -2,17 +2,19 @@ import React from 'react'
 import Selection from './Selection'
 import Cards from './Cards'
 
-const Work = ({match}) => {
+const Work = ({ match }) => {
   return (
     <section className="section-wrapper">
       <p className="work-description">
-        These are some projects I developed.<br />
-        If you are interested in my code, please click on a link on the project page.
+        These are some projects I have developed.
+        <br />
+        If you are interested in my code, please click on the project link on
+        any of the example pages.
       </p>
       <div>
         <Selection />
       </div>
-      <Cards match={match}/>
+      <Cards match={match} />
     </section>
   )
 }
