@@ -20,6 +20,7 @@ const Details = ({ match }) => {
         return (
           <section className="section-wrapper detail" id="detail">
             <h1>{targetProject.name}</h1>
+            <p className="date">{targetProject.date}</p>
             <div className="detail-links">
               <a
                 href={targetProject.links.git}
@@ -30,7 +31,7 @@ const Details = ({ match }) => {
                 <FaArrowAltCircleRight className="detail-icon" />
               </a>
 
-              {targetProject.links.project !== 'null' ? (
+              {targetProject.links.project ? (
                 <a
                   href={targetProject.links.project}
                   target="_blank"

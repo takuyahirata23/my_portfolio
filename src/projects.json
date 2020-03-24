@@ -1,5 +1,16 @@
 [
   {
+    "id": "7",
+    "name": "GRAPHQL SERVER",
+    "overview": "GraphQL server that allows this portfolio site to perform CRUD operation.",
+    "objective": "Enable basic CRUD operation so this portfolio site create, read, update, and delete projects and testimonials. Authorization is required to perform CRUD operation except reading",
+    "tools": ["GraphQL", "Prisma", "Database", "Node"],
+    "links": {
+      "git": "https://github.com/Takuya-H23/protfolio-backend"
+    },
+    "date": "Developing"
+  },
+  {
     "id": "6",
     "name": "GITHUB FINDER",
     "overview": "To search for github users and their public repositories. React Hooks are used for state management",
@@ -10,18 +21,6 @@
       "git": "https://github.com/Takuya-H23/github-finder"
     },
     "date": "July 2019"
-  },
-  {
-    "id": "5",
-    "name": "Q&A REST API",
-    "overview": "REST API for Q&A sites. Handles post/delete questions, answer questions, vote/edit answers.",
-    "objective": "Build REST API using Node.js, Express.js, MongoDB and Mongoose. Practice creating schema and Model, handling errors, and providing proper data and status code.",
-    "tools": ["Node", "Express", "Database", "Mongoose"],
-    "links": {
-      "project": "null",
-      "git": "https://github.com/Takuya-H23/qa-rest"
-    },
-    "date": "June 2019"
   },
   {
     "id": "4",
@@ -41,6 +40,18 @@
       "git": "https://github.com/Takuya-H23/my_portfolio"
     },
     "date": "July 2019"
+  },
+  {
+    "id": "5",
+    "name": "Q&A REST API",
+    "overview": "REST API for Q&A sites. Handles post/delete questions, answer questions, vote/edit answers.",
+    "objective": "Build REST API using Node.js, Express.js, MongoDB and Mongoose. Practice creating schema and Model, handling errors, and providing proper data and status code.",
+    "tools": ["Node", "Express", "Database", "Mongoose"],
+    "links": {
+      "project": "null",
+      "git": "https://github.com/Takuya-H23/qa-rest"
+    },
+    "date": "June 2019"
   },
   {
     "id": "2",
