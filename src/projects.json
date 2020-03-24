@@ -43,18 +43,6 @@
     "date": "July 2019"
   },
   {
-    "id": "3",
-    "name": "MY EDUCATION",
-    "overview": "React application that displays what I have learned at college and via online programming courses. Use Treehouse API to get data.",
-    "objective": "Create an application to show my capabilities and what I have learned. Practice using React Router, and state management",
-    "tools": ["CSS", "Bootstrap", "JavaScript", "React"],
-    "links": {
-      "project": "https://my-education.netlify.com/",
-      "git": "https://github.com/Takuya-H23/my_education"
-    },
-    "date": "May 2019"
-  },
-  {
     "id": "2",
     "name": "PREVIOUS PORTFOLIO SITE",
     "overview": "My first portfolio site when I was a student in College.",

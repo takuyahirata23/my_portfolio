@@ -36,10 +36,11 @@ const Profile = () => {
         </div>
         <div className="profile-msg">
           <p>
-            While I was a student in college, my professor told me that "no
-            websites are perfect, so always work to improve your projects and
-            skills to do the best you can". I have decided to adopt this
-            mentality and pursue this goal with passion.
+            Hard-working front-end developer with a passion for building web
+            applications that are maintainable and scalable. I am experienced in
+            developing and debugging React applications in a fast-paced
+            environment. I love to work as a team and learn new things to
+            improve my skills.
           </p>
           <p>
             I like: playing baseball, watching hockey, listen to music, and
