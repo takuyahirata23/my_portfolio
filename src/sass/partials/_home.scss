@@ -5,19 +5,19 @@
 
   @include mq('sm') {
     height: em(250px);
-  };
+  }
 
   @include mq('md') {
     height: em(350px);
-  };
+  }
 
   @include mq('lg') {
     height: em(400px);
-  };
+  }
 
   @include mq('xl') {
     height: em(500px);
-  };
+  }
 }
 
 .home-msg {
@@ -34,11 +34,15 @@
 .testimonials-wrapper {
   @include grid(1fr) {
     grid-gap: em(30px);
-  };
+  }
+
+  @include mq('md') {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   .testimonial {
     font-size: em(15px);
-    box-shadow: .5px .5px 3px rgba(0, 0, 0, .3);
+    box-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.3);
     padding: em(20px, 15px);
 
     &-msg {
