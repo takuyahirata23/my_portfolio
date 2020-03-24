@@ -106,6 +106,7 @@ nav {
   a {
     color: map-get($font-colors, 'primary');
     padding: em(5px) em(8px);
+    border: 1px solid transparent;
 
     @include mq('md') {
       color: map-get($font-colors, 'secondary');
