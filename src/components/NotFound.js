@@ -2,7 +2,7 @@ import React from 'react';
 
 const NotFound = () => (
   <section className="section-wrapper">
-    <h1>NOT FOUND</h1>
+    <h1>404 NOT FOUND</h1>
   </section>
 )
 

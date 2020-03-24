@@ -4,7 +4,6 @@ import projects from './../../projects.json'
 const ProjectContext = React.createContext()
 
 export class Provider extends Component {
-
   state = {
     selections: [
       {
@@ -26,7 +25,7 @@ export class Provider extends Component {
       {
         isClicked: false,
         name: 'Database'
-      },
+      }
     ],
     projects: []
   }
@@ -37,15 +36,15 @@ export class Provider extends Component {
     })
   }
 
-  handleSelection = (e) => {
-    const target = e.target.getAttribute('id');
+  handleSelection = e => {
+    const target = e.target.getAttribute('id')
     this.setState(prev => ({
       selections: prev.selections.map(selection => {
-        if(selection.name === target) {
+        if (selection.name === target) {
           return {
             ...selection,
-            isClicked: true,
-          } 
+            isClicked: true
+          }
         } else {
           return {
             ...selection,
@@ -56,7 +55,7 @@ export class Provider extends Component {
     }))
   }
 
-  getCurrentSelection = (selectionArray) => {
+  getCurrentSelection = selectionArray => {
     const selectedTool = selectionArray.filter(selection => selection.isClicked)
     return selectedTool[0].name
   }
@@ -65,21 +64,25 @@ export class Provider extends Component {
     if (selectedTool === 'all') {
       return projectsArray
     } else {
-      return projectsArray.filter(project => project.tools.includes(selectedTool))
+      return projectsArray.filter(project =>
+        project.tools.includes(selectedTool)
+      )
     }
   }
   render() {
-    return(
-      <ProjectContext.Provider value={{
-        projects: this.state.projects,
-        selections: this.state.selections,
-        actions: {
-          handleSelection: this.handleSelection,
-          getCurrentSelection: this.getCurrentSelection,
-          filterProjects: this.filterProjects
-        }
-      }}>
-        { this.props.children}
+    return (
+      <ProjectContext.Provider
+        value={{
+          projects: this.state.projects,
+          selections: this.state.selections,
+          actions: {
+            handleSelection: this.handleSelection,
+            getCurrentSelection: this.getCurrentSelection,
+            filterProjects: this.filterProjects
+          }
+        }}
+      >
+        {this.props.children}
       </ProjectContext.Provider>
     )
   }

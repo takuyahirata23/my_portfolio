@@ -95,17 +95,18 @@ nav {
       @include mq('md') {
         margin-bottom: 0;
         margin-left: em(20px);
-      } 
+      }
 
       @include mq('lg') {
         margin-left: em(30px);
-      } 
+      }
     }
   }
 
   a {
     color: map-get($font-colors, 'primary');
     padding: em(5px) em(8px);
+    border: 1px solid transparent;
 
     @include mq('md') {
       color: map-get($font-colors, 'secondary');
@@ -119,13 +120,12 @@ nav {
 
 @media (max-width: 768px) {
   .nav-animation-plus {
-    animation: navMenuPlus .5s forwards;
+    animation: navMenuPlus 0.5s forwards;
   }
-  
+
   .nav-animation-minus {
-    animation: navMenuMinus .5s forwards;
+    animation: navMenuMinus 0.5s forwards;
   }
-  
 }
 @keyframes navMenuPlus {
   to {
@@ -138,4 +138,3 @@ nav {
     transform: translateX(0px);
   }
 }
-
