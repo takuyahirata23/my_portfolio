@@ -1,0 +1,3 @@
+export const SET_IS_LOADING = 'SET_IS_LOADING'
+export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS'
+export const SET_FILTER = 'SET_FILTER'
