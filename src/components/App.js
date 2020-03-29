@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useContext } from 'react'
 import './../sass/App.scss'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { ProjectContext } from './../context/projects/ProjectContext'
 import Header from './Header'
 import Home from './Home'
 import Work from './Work'
@@ -9,6 +10,11 @@ import Details from './Details'
 import NotFound from './NotFound'
 
 const App = () => {
+  const { fetchProjects } = useContext(ProjectContext)
+  useEffect(() => {
+    fetchProjects()
+  })
+
   return (
     <BrowserRouter>
       <div className="App">

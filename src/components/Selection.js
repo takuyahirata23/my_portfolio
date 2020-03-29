@@ -1,22 +1,25 @@
-import React from 'react'
-import { Consumer } from './context'
+import React, { useContext } from 'react'
+import { ProjectContext } from './../context/projects/ProjectContext'
 
-const Selection = () => (
-  <Consumer>
-    {({selections, actions}) => (
-      <div className="selections-wrapper">
-        {selections.map(selection => 
-        <div 
-          className={`choice ${selection.name.toLowerCase()} ${selection.isClicked? 'active': ''}`} 
-          key={selection.name}
-          id={selection.name}
-          onClick={actions.handleSelection}
+const Selection = () => {
+  const { filter, setFilter } = useContext(ProjectContext)
+  const options = ['All', 'Sass', 'React', 'Node', 'Database']
+
+  return (
+    <div className="selections-wrapper">
+      {options.map(option => (
+        <div
+          className={`choice ${option.toLowerCase()} ${
+            option.toLowerCase() === filter ? 'active' : ''
+          }`}
+          key={option}
+          id={option}
+          onClick={() => setFilter(option.toLowerCase())}
         >
-          {selection.name.toUpperCase()}
-        </div>)}
-      </div>
-    )}
-  </Consumer>
-)
-
+          {option}
+        </div>
+      ))}
+    </div>
+  )
+}
 export default Selection
