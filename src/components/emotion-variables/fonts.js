@@ -1,6 +1,6 @@
 const p = {
-  primary: 'normal 1.6rem/2.2rem montserrat',
-  secondary: 'italic 1.6rem/3rem montserrat'
+  primary: 'normal 1.6rem/1.5 montserrat',
+  secondary: 'normal 1.4rem/1.3 montserrat'
 }
 
 export default {

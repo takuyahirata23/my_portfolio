@@ -2,7 +2,7 @@
 import { jsx, css } from '@emotion/core'
 import styled from '@emotion/styled'
 import { P, Section } from './../atoms'
-import Testimonial from '../Testimonial'
+import Testimonial from '../organisms/Testimonial'
 import pic from './../../img/opening_animation.svg'
 
 const message = css`

@@ -4,7 +4,7 @@ import { jsx } from '@emotion/core'
 import styled from '@emotion/styled'
 
 const Wrapper = styled.section`
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 `
 
 const Section = ({ children, ...props }) => (
