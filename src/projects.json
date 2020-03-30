@@ -26,8 +26,8 @@
   {
     "id": "4",
     "name": "PORTFOLIO SITE",
-    "overview": "Portfolio site using React. ",
-    "objective": "Build a react application that is maintainable and organized well. Practice using React Router and React Context API to improve state management skills. Use Sass to style efficiently, and Sketch to create comps.",
+    "overview": "Portfolio site using the latest React features.",
+    "objective": "Build a react application that is maintainable and scalable. Use \"useContext\" and \"useReducer\" for state management.",
     "tools": [
       "Sass",
       "JavaScript",
