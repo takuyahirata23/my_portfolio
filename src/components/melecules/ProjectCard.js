@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import PropTypes from 'prop-types'
-import { jsx, css, keyframes } from '@emotion/core'
+import { jsx, css } from '@emotion/core'
 import { Link } from 'react-router-dom'
 import { colors } from './../emotion-variables'
 import { ToolBullets } from './../atoms'
@@ -29,7 +29,7 @@ const span = css`
 `
 
 const ProjectCard = ({ name, tools }) => {
-  const url = name.replace(' ', '-').toLowerCase()
+  const url = name.replace(/ /g, '-').toLowerCase()
   return (
     <div>
       <Link to={`/work/${url}`}>

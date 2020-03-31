@@ -18,6 +18,9 @@ const HeaderS = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${mqs.lg} {
+    padding: 1.5rem 4rem;
+  }
 `
 
 const HamburgerMenuWrapper = styled.div`

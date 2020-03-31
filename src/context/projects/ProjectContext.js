@@ -10,9 +10,9 @@ const initialState = {
   filter: 'all'
 }
 
-function makeAPICall() {
-  return arrayOfProjects
-}
+// function makeAPICall() {
+//   return arrayOfProjects
+// }
 
 export const ProjectContext = createContext(initialState)
 
@@ -24,8 +24,9 @@ export const ProjectProvider = ({ children }) => {
   }
 
   function fetchProjects() {
-    const projects = makeAPICall()
-    dispatch({ type: FETCH_DATA_SUCCESS, projects: projects })
+    dispatch(() => setIsLoading(true))
+    // const projects = makeAPICall()
+    dispatch({ type: FETCH_DATA_SUCCESS, projects: arrayOfProjects })
   }
 
   function setFilter(value) {
@@ -37,9 +38,9 @@ export const ProjectProvider = ({ children }) => {
       value={{
         isLoading: state.isLoading,
         filteredProjects: state.filteredProjects,
+        projects: state.projects,
         filter: state.filter,
         setFilter,
-        setIsLoading,
         fetchProjects
       }}
     >
