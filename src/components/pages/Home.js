@@ -7,7 +7,7 @@ import pic from './../../img/opening_animation.svg'
 
 //align with testimonial cards below
 const message = css`
-  padding: 0 ${space.padding.sm};
+  padding: 0 ${space.padding.xs};
 `
 
 const Home = () => {

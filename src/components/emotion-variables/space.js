@@ -1,18 +1,20 @@
 const header = {
-  sm: '7rem',
+  xs: '7rem',
   md: '8rem'
 }
 
 // const label = ['sm', 'md', 'lg', 'xl']
 
 const padding = {
-  sm: '2rem'
+  xs: '2rem',
+  sm: '2rem',
+  md: '4rem'
 }
 
 const margin = {
-  dividerSm: '4rem',
+  dividerXs: '4rem',
   dividerMd: '6rem',
-  sm: '1.5rem'
+  xs: '1.5rem'
 }
 
 export default { header, margin, padding }

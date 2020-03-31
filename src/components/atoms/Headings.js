@@ -7,7 +7,7 @@ import { colors, fonts, space } from './../emotion-variables'
 const Heading1 = styled.h1`
   font: ${props => (props.secondary ? fonts.h1.secondary : fonts.h1.primary)};
   color: ${colors.black};
-  margin-bottom: ${props => (props.margin ? space.margin.sm : 0)};
+  margin-bottom: ${props => (props.margin ? space.margin.xs : 0)};
 `
 
 export const H1 = ({ children, secondary = false, margin, ...props }) => {
@@ -25,7 +25,7 @@ H1.propTypes = {
 const Heading2 = styled.h2`
   font: ${props => (props.secondary ? fonts.h2.secondary : fonts.h2.primary)};
   color: ${colors.black};
-  margin-bottom: ${props => (props.margin ? space.margin.sm : 0)};
+  margin-bottom: ${props => (props.margin ? space.margin.xs : 0)};
 `
 
 export const H2 = ({ children, secondary = false, margin, ...props }) => {
@@ -43,7 +43,7 @@ H2.propTypes = {
 const Heading3 = styled.h3`
   font: ${props => (props.secondary ? fonts.h3.secondary : fonts.h3.primary)};
   color: ${colors.black};
-  margin-bottom: ${props => (props.margin ? space.margin.sm : 0)};
+  margin-bottom: ${props => (props.margin ? space.margin.xs : 0)};
 `
 
 export const H3 = ({ children, secondary = false, margin, ...props }) => {

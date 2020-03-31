@@ -6,25 +6,37 @@ import { MdContactMail } from 'react-icons/md'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import { Section, H1, H2, P } from './../atoms'
 import { TodoList } from './../organisms'
-import { colors, space, mqs } from './../emotion-variables'
+import { colors, mqs } from './../emotion-variables'
 
 const grid = css`
   display: grid;
   row-gap: 1rem;
 `
-
 const profileWrapper = css`
+  ${mqs.md} {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 1rem 2rem;
+  }
+`
+
+const infoWrapper = css`
   grid-template-columns: 1fr;
   justify-items: center;
   row-gap: 1rem;
-  margin-bottom: ${space.margin.sm};
 `
 
 const ImgWrapper = styled.div`
   border: 1.4px solid ${colors.tertiary};
   border-radius: 50%;
   padding: 0.8rem;
-  width: 50%;
+  width: 40%;
+  ${mqs.sm} {
+    width: 30%;
+  }
+  ${mqs.md} {
+    width: 45%;
+  }
+
   img {
     width: 100%;
     border-radius: 50%;
@@ -49,8 +61,8 @@ const border = css`
 const Profile = () => {
   return (
     <div>
-      <Section>
-        <div css={[grid, profileWrapper]}>
+      <Section css={[grid, profileWrapper]}>
+        <div css={[grid, infoWrapper]}>
           <ImgWrapper>
             <img src={takuya} alt="Takuya" />
           </ImgWrapper>

@@ -7,7 +7,14 @@ import { colors, space, mqs } from './../emotion-variables'
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 5fr;
+  column-gap: 1.5rem;
+  ${mqs.sm} {
+    grid-template-columns: 1fr 6fr;
+  }
+  ${mqs.md} {
+    grid-template-columns: 1fr 7fr;
+  }
 `
 
 const h3 = css`

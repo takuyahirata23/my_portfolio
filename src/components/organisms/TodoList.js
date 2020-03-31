@@ -41,13 +41,17 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 2rem;
+  ${mqs.md} {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
 `
 
 const TodoList = () => {
   return (
     <Grid>
-      {contents.map(content => (
-        <Todo title={content.title} text={content.text}>
+      {contents.map((content, index) => (
+        <Todo key={`todo-${index}`} title={content.title} text={content.text}>
           {content.image}
         </Todo>
       ))}

@@ -7,7 +7,7 @@ import { colors, fonts, mqs, space } from '../emotion-variables'
 const Paragraph = styled.p`
   font: ${props => (!props.secondary ? fonts.p.primary : fonts.p.secondary)};
   color: ${colors.black};
-  margin-bottom: ${props => (props.margin ? space.margin.sm : 0)};
+  margin-bottom: ${props => (props.margin ? space.margin.xs : 0)};
 `
 
 const P = ({ children, secondary = false, margin = false, ...props }) => {

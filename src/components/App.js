@@ -15,10 +15,14 @@ import { mqs, space } from './emotion-variables'
 
 const MainWrapper = styled.main`
   max-width: 120rem;
-  margin: ${space.header.sm} auto 0;
-  padding: ${space.padding.sm};
+  margin: ${space.header.xs} auto 0;
+  padding: 4rem 2rem;
+  ${mqs.sm} {
+    padding: 4rem 2rem;
+  }
   ${mqs.md} {
     margin-top: ${space.header.md};
+    padding: 6rem 2rem;
   }
 `
 
