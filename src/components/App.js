@@ -9,8 +9,8 @@ import { Header } from './organisms'
 import Home from './pages/Home'
 import Work from './pages/Work'
 import Profile from './pages/Profile'
-import Details from './Details'
-import NotFound from './NotFound'
+import Details from './pages/Details'
+import NotFound from './pages/NotFound'
 import { mqs, space } from './emotion-variables'
 
 const MainWrapper = styled.main`

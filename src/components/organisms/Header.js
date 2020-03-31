@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { jsx, css } from '@emotion/core'
 import styled from '@emotion/styled'
+import { Link } from 'react-router-dom'
 import { mqs, colors } from '../emotion-variables'
 import { NavLink } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
@@ -75,7 +76,9 @@ const Header = () => {
   const [showMobileNav, setShowMobileNav] = useState(false)
   return (
     <HeaderS>
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
       <nav>
         <HamburgerMenuWrapper onClick={() => setShowMobileNav(!showMobileNav)}>
           {showMobileNav ? (
