@@ -30,10 +30,12 @@ const MainWrapper = styled.main`
 `
 
 const App = () => {
-  const { fetchProjects } = useContext(ProjectContext)
+  const { fetchProjects, isLoading } = useContext(ProjectContext)
   useEffect(() => {
     fetchProjects()
   }, [])
+
+  if (isLoading) return <div>Loading...</div>
 
   return (
     <BrowserRouter>

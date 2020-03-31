@@ -12,7 +12,8 @@ const h2 = {
 }
 
 const h3 = {
-  primary: 'normal 1.8rem montserrat'
+  primary: 'normal 1.8rem montserrat',
+  secondary: 'normal 1.8rem montserrat'
 }
 
 export default { p, h1, h2, h3 }

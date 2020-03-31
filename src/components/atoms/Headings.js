@@ -42,13 +42,29 @@ H2.propTypes = {
 
 const Heading3 = styled.h3`
   font: ${props => (props.secondary ? fonts.h3.secondary : fonts.h3.primary)};
-  color: ${colors.black};
+  color: ${props =>
+    props.secondary
+      ? colors.secondary
+      : props.tertiary
+      ? colors.tertiary
+      : colors.black};
   margin-bottom: ${props => (props.margin ? space.margin.xs : 0)};
 `
 
-export const H3 = ({ children, secondary = false, margin, ...props }) => {
+export const H3 = ({
+  children,
+  secondary = false,
+  tertiary,
+  margin,
+  ...props
+}) => {
   return (
-    <Heading3 secondary={secondary} margin={margin} {...props}>
+    <Heading3
+      secondary={secondary}
+      margin={margin}
+      tertiary={tertiary}
+      {...props}
+    >
       {children}
     </Heading3>
   )

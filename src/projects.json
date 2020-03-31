@@ -3,7 +3,7 @@
     "id": "7",
     "name": "GRAPHQL SERVER",
     "overview": "GraphQL/Prisma server that allows this portfolio site to perform CRUD operation. Jest for testing.",
-    "objective": "Enable basic CRUD operation so this portfolio site can create, read, update, and delete projects and testimonials. Require authentication in order to perform CRUD operation except reading.",
+    "objective": "Enable basic CRUD operation so this portfolio site can create, read, update, and delete projects as well as testimonials. Require authentication in order to perform CRUD operation except reading.",
     "tools": ["GraphQL", "Prisma", "Database", "PostgreSQL", "Node", "Jest"],
     "links": {
       "project": "https://takuya-portfolio-prod.herokuapp.com/",
@@ -27,7 +27,7 @@
     "id": "4",
     "name": "PORTFOLIO SITE",
     "overview": "Portfolio site using the latest React features.",
-    "objective": "Build a react application that is maintainable and scalable. Use \"useContext\" and \"useReducer\" for state management.",
+    "objective": "Build a react application that is maintainable and scalable. Use \"useContext\" and \"useReducer\" for state management. Create design system using Emotion",
     "tools": [
       "Sass",
       "JavaScript",

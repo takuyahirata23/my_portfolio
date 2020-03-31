@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core'
 import styled from '@emotion/styled'
 import { useContext } from 'react'
 import { ProjectContext } from '../../context/projects/ProjectContext'
-import { colors, space } from '../emotion-variables'
+import { colors } from '../emotion-variables'
 
 const SelectionWrapper = styled.div`
   border-bottom: 1px solid ${colors.border};

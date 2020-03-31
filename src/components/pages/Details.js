@@ -1,39 +1,82 @@
-import React, { useEffect, useContext, useState } from 'react'
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core'
+import styled from '@emotion/styled'
+import { useEffect, useContext } from 'react'
 import { ProjectContext } from './../../context/projects/ProjectContext'
 import { Link, useParams } from 'react-router-dom'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 import NotFound from './NotFound'
+import { Section, H1, H3, P, Grid } from './../atoms'
+import { colors, mqs, space } from './../emotion-variables'
+
+const linkText = css`
+  color: ${colors.primary};
+  vertical-align: middle;
+  margin-right: 0.8rem;
+`
+
+const back = css`
+  margin-right: 1rem;
+`
+
+const arrow = css`
+  color: ${colors.primary};
+  vertical-align: middle;
+`
+
+const ContentWrapper = styled.div`
+  margin-bottom: 4rem;
+`
+
+const grid = css`
+  row-gap: 3rem;
+  grid-template-columns: 1fr;
+  margin-bottom: ${space.margin.dividerXs};
+  ${mqs.lg} {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 5rem;
+  }
+`
+
+const gridUl = css`
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, 15rem);
+`
 
 const Details = () => {
-  const { filteredProjects } = useContext(ProjectContext)
+  const { filteredProjects, isLoading } = useContext(ProjectContext)
   const { project: param } = useParams()
-  const [currentProject, setCurrentProject] = useState()
+
+  const currentProjectIndex = filteredProjects.findIndex(
+    project => project.name === param.replace(/-/g, ' ').toUpperCase()
+  )
+
+  const currentProject = filteredProjects[currentProjectIndex]
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    setCurrentProject(
-      filteredProjects.find(
-        project => project.name === param.replace(/-/g, ' ').toUpperCase()
-      )
-    )
-  }, [param, filteredProjects])
+  }, [])
 
-  if (currentProject === undefined) {
+  if (isLoading || !currentProject) return <div>Loading...</div>
+
+  // make sure the project exists
+  if (currentProject === -1) {
     return <NotFound />
   }
-
   return (
-    <section className="section-wrapper detail" id="detail">
-      <h1>{currentProject.name}</h1>
-      <p className="date">{currentProject.date}</p>
-      <div className="detail-links">
+    <Section>
+      <H1 margin>{currentProject.name}</H1>
+      <P margin>{currentProject.date}</P>
+      <ContentWrapper>
         <a
+          css={{ marginRight: '1.5rem' }}
           href={currentProject.links.git}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span>REPOSITORY</span>
-          <FaArrowAltCircleRight className="detail-icon" />
+          <span css={linkText}>REPOSITORY</span>
+          <FaArrowAltCircleRight css={arrow} />
         </a>
 
         {currentProject.links.project ? (
@@ -42,40 +85,46 @@ const Details = () => {
             target="_blank"
             rel="noopener        noreferrer"
           >
-            <span className="last-span">PROJECT</span>
-            <FaArrowAltCircleRight className="detail-icon" />
+            <span css={linkText}>PROJECT</span>
+            <FaArrowAltCircleRight css={arrow} />
           </a>
         ) : null}
-      </div>
+      </ContentWrapper>
 
-      <div className="detail-info-wrapper">
+      <Grid css={grid}>
         <div>
-          <h2>OVERVIEW</h2>
-          <p>{currentProject.overview}</p>
+          <H3 tertiary margin>
+            OVERVIEW
+          </H3>
+          <P>{currentProject.overview}</P>
         </div>
 
         <div>
-          <h2>OBJECTIVE</h2>
-          <p>{currentProject.objective}</p>
+          <H3 tertiary margin>
+            OBJECTIVE
+          </H3>
+          <P>{currentProject.objective}</P>
         </div>
 
-        <div className="tools-wrapper">
-          <h2>TOOLS</h2>
-          <ul>
+        <div>
+          <H3 tertiary margin>
+            TOOLS
+          </H3>
+          <ul css={gridUl}>
             {currentProject.tools.map(tool =>
               tool === 'Database' ? null : <li key={tool}>-{tool}</li>
             )}
           </ul>
         </div>
-      </div>
+      </Grid>
 
-      <div className="link-back">
+      <div>
         <Link to="/work">
-          <FaArrowAltCircleLeft className="back-icon" />
-          <span>Back</span>
+          <FaArrowAltCircleLeft css={[arrow, back]} />
+          <span css={linkText}>Back</span>
         </Link>
       </div>
-    </section>
+    </Section>
   )
 }
 
