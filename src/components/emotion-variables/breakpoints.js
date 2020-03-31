@@ -1,4 +1,4 @@
-const breakpoints = [576, 786, 992, 1200]
+const breakpoints = [576, 768, 992, 1200]
 const label = ['sm', 'md', 'lg', 'xl']
 
 const mqs = breakpoints

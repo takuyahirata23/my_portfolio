@@ -14,7 +14,9 @@ const padding = {
 const margin = {
   dividerXs: '4rem',
   dividerMd: '6rem',
-  xs: '1.5rem'
+  xs: '1.5rem',
+  sm: '2rem',
+  md: '3rem'
 }
 
 export default { header, margin, padding }

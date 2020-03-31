@@ -1,0 +1,25 @@
+/** @jsx jsx */
+import { useContext } from 'react'
+import { jsx, css } from '@emotion/core'
+import { ProjectContext } from './../../context/projects/ProjectContext'
+import { Grid } from './../atoms'
+import { ProjectCard } from './../melecules'
+
+const grid = css`
+  grid-template-columns: repeat(auto-fit, 14rem);
+  grid-gap: 1.5rem;
+`
+
+const ProjectCardList = () => {
+  const { filteredProjects } = useContext(ProjectContext)
+
+  return (
+    <Grid css={grid}>
+      {filteredProjects.map(project => (
+        <ProjectCard key={project.id} {...project} />
+      ))}
+    </Grid>
+  )
+}
+
+export default ProjectCardList

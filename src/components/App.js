@@ -7,7 +7,7 @@ import styled from '@emotion/styled'
 import { Normalize } from './atoms'
 import { Header } from './organisms'
 import Home from './pages/Home'
-import Work from './Work'
+import Work from './pages/Work'
 import Profile from './pages/Profile'
 import Details from './Details'
 import NotFound from './NotFound'
@@ -18,11 +18,14 @@ const MainWrapper = styled.main`
   margin: ${space.header.xs} auto 0;
   padding: 4rem 2rem;
   ${mqs.sm} {
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
   }
   ${mqs.md} {
     margin-top: ${space.header.md};
-    padding: 6rem 2rem;
+    padding: 7rem 2rem;
+  }
+  ${mqs.lg} {
+    padding: 9rem 2rem;
   }
 `
 

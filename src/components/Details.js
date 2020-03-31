@@ -4,19 +4,19 @@ import { Link, useParams } from 'react-router-dom'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 import NotFound from './NotFound'
 
-const Details = ({ match }) => {
-  const { projects } = useContext(ProjectContext)
+const Details = () => {
+  const { filteredProjects } = useContext(ProjectContext)
   const { project: param } = useParams()
   const [currentProject, setCurrentProject] = useState()
 
   useEffect(() => {
     window.scrollTo(0, 0)
     setCurrentProject(
-      projects.find(
+      filteredProjects.find(
         project => project.name === param.replace(/-/g, ' ').toUpperCase()
       )
     )
-  }, [param, projects])
+  }, [param, filteredProjects])
 
   if (currentProject === undefined) {
     return <NotFound />

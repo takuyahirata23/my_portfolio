@@ -1,3 +1,4 @@
+import ProjectCard from './ProjectCard'
 import Todo from './Todo'
 
-export { Todo }
+export { ProjectCard, Todo }
