@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import PropTypes from 'prop-types'
-import { jsx, css } from '@emotion/core'
+import { jsx, css, keyframes } from '@emotion/core'
 import { Link } from 'react-router-dom'
 import { colors } from './../emotion-variables'
+import { ToolBullets } from './../atoms'
 
 const flex = css`
   background-color: ${colors.primary};
@@ -27,7 +28,7 @@ const span = css`
   padding: 0 0.5rem;
 `
 
-const ProjectCard = ({ name }) => {
+const ProjectCard = ({ name, tools }) => {
   const url = name.replace(' ', '-').toLowerCase()
   return (
     <div>
@@ -38,12 +39,14 @@ const ProjectCard = ({ name }) => {
           </div>
         </div>
       </Link>
+      <ToolBullets name={name} tools={tools} />
     </div>
   )
 }
 
 ProjectCard.propTypes = {
-  projectURL: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  tools: PropTypes.array.isRequired
 }
 
 export default ProjectCard

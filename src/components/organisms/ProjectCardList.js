@@ -16,7 +16,11 @@ const ProjectCardList = () => {
   return (
     <Grid css={grid}>
       {filteredProjects.map(project => (
-        <ProjectCard key={project.id} {...project} />
+        <ProjectCard
+          key={project.id}
+          name={project.name}
+          tools={project.tools}
+        />
       ))}
     </Grid>
   )

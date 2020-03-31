@@ -14,24 +14,24 @@ const SelectionWrapper = styled.div`
 const Option = styled.div`
   cursor: pointer;
   margin-bottom: 1rem;
-  margin-right: ${space.margin.xs};
+  margin-right: 2.5rem;
   border: ${props =>
     props.active
       ? `1.5px solid ${colors.secondary}`
       : '1.5px solid transparent'};
   padding: 0.3rem 1rem;
   position: relative;
-  left: 1rem;
+  left: 1.5rem;
 
   :before {
     content: '';
     background-color: ${props => colors[props.option]};
-    border-radius: 50%;
+    border-radius: ${props => (props.option === 'all' ? '0' : '50%')};
     position: absolute;
-    top: 1rem;
-    left: -1rem;
-    width: 0.5rem;
-    height: 0.5rem;
+    top: 0.7rem;
+    left: -1.7rem;
+    width: 0.8rem;
+    height: 0.8rem;
   }
 `
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useContext, useState } from 'react'
-import { ProjectContext } from './../context/projects/ProjectContext'
+import { ProjectContext } from './../../context/projects/ProjectContext'
 import { Link, useParams } from 'react-router-dom'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 import NotFound from './NotFound'
