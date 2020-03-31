@@ -6,6 +6,7 @@ import arrayOfProjects from './../../projects.json'
 const initialState = {
   isLoading: false,
   projects: [],
+  filteredProjects: [],
   filter: 'all'
 }
 
@@ -35,7 +36,7 @@ export const ProjectProvider = ({ children }) => {
     <ProjectContext.Provider
       value={{
         isLoading: state.isLoading,
-        projects: state.projects,
+        filteredProjects: state.filteredProjects,
         filter: state.filter,
         setFilter,
         setIsLoading,

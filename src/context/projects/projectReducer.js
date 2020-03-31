@@ -12,12 +12,21 @@ export default function(state, action) {
       return {
         ...state,
         isLoading: false,
-        projects: action.projects
+        projects: action.projects,
+        filteredProjects: action.projects
       }
 
     case SET_FILTER:
       return {
         ...state,
+        filteredProjects:
+          action.value === 'all'
+            ? state.projects
+            : state.projects.filter(project =>
+                project.tools
+                  .map(tool => tool.toLowerCase())
+                  .includes(action.value)
+              ),
         filter: action.value
       }
 

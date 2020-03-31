@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { jsx, css } from '@emotion/core'
 import styled from '@emotion/styled'
 import { H3, P } from './../atoms'
-import { colors, space, mqs } from './../emotion-variables'
+import { colors, mqs } from './../emotion-variables'
 
 const Grid = styled.div`
   display: grid;

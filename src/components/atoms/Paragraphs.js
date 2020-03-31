@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 import { jsx } from '@emotion/core'
 import styled from '@emotion/styled'
-import { colors, fonts, mqs, space } from '../emotion-variables'
+import { colors, fonts, space } from '../emotion-variables'
 
 const Paragraph = styled.p`
   font: ${props => (!props.secondary ? fonts.p.primary : fonts.p.secondary)};

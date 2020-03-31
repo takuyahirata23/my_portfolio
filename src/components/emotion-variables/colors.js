@@ -5,5 +5,10 @@ export default {
   secondary: '#eda506',
   tertiary: '#ee4266',
   border: '#cacaea',
-  cardBorder: '#ff9b00'
+  cardBorder: '#ff9b00',
+  all: '#494949',
+  react: '#0d8fb7',
+  node: '#0c8e63',
+  graphql: '#cb4700',
+  database: '#eda506'
 }
