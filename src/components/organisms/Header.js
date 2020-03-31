@@ -18,6 +18,7 @@ const HeaderS = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 100;
   ${mqs.lg} {
     padding: 1.5rem 4rem;
   }
@@ -38,12 +39,11 @@ const hamburgerMenuIcon = css`
 const UlS = styled.ul`
   position: fixed;
   padding-top: 2rem;
-  top: 5.2rem;
+  top: 5.6rem;
   bottom: 30%;
   right: -60%;
   width: 60%;
   background-color: ${colors.white};
-  z-index: 100;
   border: 2px solid ${colors.primary};
   transition: transform 0.4s ease-out;
   text-align: center;
