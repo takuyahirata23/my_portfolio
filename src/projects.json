@@ -27,7 +27,7 @@
     "id": "4",
     "name": "PORTFOLIO SITE",
     "overview": "Portfolio site using the latest React features.",
-    "objective": "Build a react application that is maintainable and scalable. Use \"useContext\" and \"useReducer\" for state management.",
+    "objective": "Build a react application that is maintainable and scalable. Use \"useContext\" and \"useReducer\" for state management. Create design system using Emotion",
     "tools": [
       "Sass",
       "JavaScript",
