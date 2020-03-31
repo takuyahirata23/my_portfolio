@@ -1,25 +1,43 @@
-import React, { useEffect, useContext } from 'react'
-import './../sass/App.scss'
+/** @jsx jsx */
+import { useEffect, useContext } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { ProjectContext } from './../context/projects/ProjectContext'
-import Header from './Header'
-import Home from './Home'
+import { jsx } from '@emotion/core'
+import styled from '@emotion/styled'
+import { Normalize } from './atoms'
+import { Header } from './organisms'
+import Home from './pages/Home'
 import Work from './Work'
-import Profile from './Profile'
+import Profile from './pages/Profile'
 import Details from './Details'
 import NotFound from './NotFound'
+import { mqs, space } from './emotion-variables'
+
+const MainWrapper = styled.main`
+  max-width: 120rem;
+  margin: ${space.header.xs} auto 0;
+  padding: 4rem 2rem;
+  ${mqs.sm} {
+    padding: 4rem 2rem;
+  }
+  ${mqs.md} {
+    margin-top: ${space.header.md};
+    padding: 6rem 2rem;
+  }
+`
 
 const App = () => {
   const { fetchProjects } = useContext(ProjectContext)
   useEffect(() => {
     fetchProjects()
-  })
+  }, [])
 
   return (
     <BrowserRouter>
+      <Normalize />
       <div className="App">
         <Header />
-        <div className="main-wrapper">
+        <MainWrapper>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/work" component={Work} />
@@ -27,7 +45,7 @@ const App = () => {
             <Route path="/work/:project" component={Details} />
             <Route component={NotFound} />
           </Switch>
-        </div>
+        </MainWrapper>
       </div>
     </BrowserRouter>
   )

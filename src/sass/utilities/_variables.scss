@@ -1,6 +1,6 @@
 $font-colors: (
   'primary': #000000,
-  'secondary': #FFFFFF,
+  'secondary': #ffffff,
   'tertiary': #ee4266,
   'card': #ffd28c
 );
@@ -13,12 +13,11 @@ $fonts: (
 );
 
 $theme-colors: (
-  'primary-bg': #FFFFFF,
+  'primary-bg': #ffffff,
   'secondary-bg': #1c1259,
   'border': #cacaea,
   'card-border': #ff9b00,
-  'card-background': #1c1259,
-  'accent-light': #eda506,
+  'accent-light': #eda506
 );
 
 $selection-colors: (
@@ -26,10 +25,10 @@ $selection-colors: (
   'react': #0d8fb7,
   'node': #0c8e63,
   'sass': #cb4700,
-  'database': #eda506,
+  'database': #eda506
 );
 
-$breakpoints : (
+$breakpoints: (
   'sm': 576px,
   'md': 768px,
   'lg': 992px,
