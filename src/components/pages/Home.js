@@ -1,12 +1,13 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import styled from '@emotion/styled'
 import { P, Section } from './../atoms'
-import Testimonial from '../organisms/Testimonial'
+import { space } from './../emotion-variables'
+import { Testimonial } from '../organisms'
 import pic from './../../img/opening_animation.svg'
 
+//align with testimonial cards below
 const message = css`
-  padding: 0 2rem;
+  padding: 0 ${space.padding.sm};
 `
 
 const Home = () => {

@@ -2,9 +2,13 @@
 import PropTypes from 'prop-types'
 import { jsx } from '@emotion/core'
 import styled from '@emotion/styled'
+import { mqs, space } from './../emotion-variables'
 
 const Wrapper = styled.section`
-  margin-bottom: 4rem;
+  margin-bottom: ${space.margin.dividerSm};
+  ${mqs.md} {
+    margin-bottom: ${space.margin.dividerMd};
+  }
 `
 
 const Section = ({ children, ...props }) => (

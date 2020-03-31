@@ -7,11 +7,10 @@ import { colors, mqs } from './../emotion-variables'
 
 const testimonialWrapper = css`
   display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 2rem;
+  row-gap: 2rem;
   ${mqs.md} {
+    gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
   }
 `
 
