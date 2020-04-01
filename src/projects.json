@@ -13,7 +13,7 @@
   },
   {
     "id": "7",
-    "name": "Storybook",
+    "name": "STORYBOOK",
     "overview": "Storybook for this portfolio site",
     "objective": "Build design system to develop reuseable and scalable components.",
     "tools": ["React", "Storybook"],
