@@ -1,6 +1,6 @@
 [
   {
-    "id": "7",
+    "id": "8",
     "name": "GRAPHQL SERVER",
     "overview": "GraphQL/Prisma server that allows this portfolio site to perform CRUD operation. Jest for testing.",
     "objective": "Enable basic CRUD operation so this portfolio site can create, read, update, and delete projects as well as testimonials. Require authentication in order to perform CRUD operation except reading.",
@@ -8,6 +8,18 @@
     "links": {
       "project": "https://takuya-portfolio-prod.herokuapp.com/",
       "git": "https://github.com/Takuya-H23/protfolio-backend"
+    },
+    "date": "March 2020"
+  },
+  {
+    "id": "7",
+    "name": "STORYBOOK",
+    "overview": "Storybook for this portfolio site",
+    "objective": "Build design system to develop reuseable and scalable components.",
+    "tools": ["React", "Storybook"],
+    "links": {
+      "project": "https://takuyahirata-storybook.netlify.com",
+      "git": "https://github.com/Takuya-H23/my_portfolio"
     },
     "date": "March 2020"
   },
@@ -29,9 +41,9 @@
     "overview": "Portfolio site using the latest React features.",
     "objective": "Build a react application that is maintainable and scalable. Use \"useContext\" and \"useReducer\" for state management. Create design system using Emotion",
     "tools": [
-      "Sass",
-      "JavaScript",
       "React",
+      "JavaScript",
+      "Emotion",
       "Sketch",
       "Photoshop",
       "Illustrator"

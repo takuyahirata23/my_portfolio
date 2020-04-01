@@ -58,8 +58,8 @@ const Details = () => {
     window.scrollTo(0, 0)
   }, [])
 
+  console.log(isLoading, currentProject)
   if (isLoading || !currentProject) return <div>Loading...</div>
-
   // make sure the project exists
   if (currentProject === -1) {
     return <NotFound />
