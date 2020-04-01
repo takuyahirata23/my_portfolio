@@ -2,13 +2,14 @@
   {
     "id": "7",
     "name": "GRAPHQL SERVER",
-    "overview": "GraphQL server that allows this portfolio site to perform CRUD operation.",
-    "objective": "Enable basic CRUD operation so this portfolio site create, read, update, and delete projects and testimonials. Authorization is required to perform CRUD operation except reading",
-    "tools": ["GraphQL", "Prisma", "Database", "Node"],
+    "overview": "GraphQL/Prisma server that allows this portfolio site to perform CRUD operation. Jest for testing.",
+    "objective": "Enable basic CRUD operation so this portfolio site can create, read, update, and delete projects as well as testimonials. Require authentication in order to perform CRUD operation except reading.",
+    "tools": ["GraphQL", "Prisma", "Database", "PostgreSQL", "Node", "Jest"],
     "links": {
+      "project": "https://takuya-portfolio-prod.herokuapp.com/",
       "git": "https://github.com/Takuya-H23/protfolio-backend"
     },
-    "date": "Developing"
+    "date": "March 2020"
   },
   {
     "id": "6",
@@ -25,8 +26,8 @@
   {
     "id": "4",
     "name": "PORTFOLIO SITE",
-    "overview": "Portfolio site using React. ",
-    "objective": "Build a react application that is maintainable and organized well. Practice using React Router and React Context API to improve state management skills. Use Sass to style efficiently, and Sketch to create comps.",
+    "overview": "Portfolio site using the latest React features.",
+    "objective": "Build a react application that is maintainable and scalable. Use \"useContext\" and \"useReducer\" for state management. Create design system using Emotion",
     "tools": [
       "Sass",
       "JavaScript",
@@ -46,7 +47,7 @@
     "name": "Q&A REST API",
     "overview": "REST API for Q&A sites. Handles post/delete questions, answer questions, vote/edit answers.",
     "objective": "Build REST API using Node.js, Express.js, MongoDB and Mongoose. Practice creating schema and Model, handling errors, and providing proper data and status code.",
-    "tools": ["Node", "Express", "Database", "Mongoose"],
+    "tools": ["Node", "Express", "Database", "MongoDB", "Mongoose"],
     "links": {
       "project": "null",
       "git": "https://github.com/Takuya-H23/qa-rest"
