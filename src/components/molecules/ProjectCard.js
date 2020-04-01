@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom'
 import { colors } from './../emotion-variables'
 import { ToolBullets } from './../atoms'
 
+const cardWrapper = css`
+  width: 14rem;
+`
+
 const flex = css`
   background-color: ${colors.primary};
   border: 1px solid ${colors.secondary};
@@ -31,7 +35,7 @@ const span = css`
 const ProjectCard = ({ name, tools }) => {
   const url = name.replace(/ /g, '-').toLowerCase()
   return (
-    <div>
+    <div css={cardWrapper}>
       <Link to={`/work/${url}`}>
         <div css={[flex, outer]}>
           <div css={[flex, inner]}>

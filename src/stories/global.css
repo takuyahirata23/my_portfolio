@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: montserrat;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  border: 1.8px solid transparent;
+  color: #eda506;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a.active {
+  border: 1.8px solid #1c1259;
+  @media (min-width: 786px) {
+    border: 1.8px solid #eda506;
+  }
+}

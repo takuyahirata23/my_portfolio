@@ -2,7 +2,7 @@
 import { jsx, css } from '@emotion/core'
 import styled from '@emotion/styled'
 import { mqs } from './../emotion-variables'
-import { Todo } from './../melecules'
+import { Todo } from './../molecules'
 import { IoIosCode, IoIosBook, IoMdPeople, IoMdLaptop } from 'react-icons/io'
 
 function list(image, title, text) {

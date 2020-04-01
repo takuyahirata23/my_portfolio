@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import { Section, P } from '../atoms'
-import Selection from '../melecules/Selection'
+import Selection from '../molecules/Selection'
 import { ProjectCardList } from './../organisms'
 
 const Work = () => {
