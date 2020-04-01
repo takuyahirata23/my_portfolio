@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { jsx, css } from '@emotion/core'
 import { ProjectContext } from './../../context/projects/ProjectContext'
 import { Grid } from './../atoms'
-import { ProjectCard } from './../melecules'
+import { ProjectCard } from './../molecules'
 
 const grid = css`
   grid-template-columns: repeat(auto-fit, 14rem);
