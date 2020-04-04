@@ -19,6 +19,7 @@ const Normalize = () => {
         body {
           font-size: 1.6rem;
           font-family: montserrat;
+          background-color: ${colors.background};
         }
 
         ul {
@@ -43,7 +44,7 @@ const Normalize = () => {
         a.active {
           border: 1.8px solid ${colors.primary};
           @media (min-width: 786px) {
-            border: 1.8px solid ${colors.secondary};
+            border: 1.8px solid ${colors.tertiary};
           }
         }
       `}

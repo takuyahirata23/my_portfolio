@@ -30,6 +30,7 @@ const inner = css`
 const span = css`
   text-align: center;
   padding: 0 0.5rem;
+  color: ${colors.tertiary};
 `
 
 const ProjectCard = ({ name, tools }) => {
@@ -50,7 +51,7 @@ const ProjectCard = ({ name, tools }) => {
 
 ProjectCard.propTypes = {
   name: PropTypes.string.isRequired,
-  tools: PropTypes.array.isRequired
+  tools: PropTypes.array.isRequired,
 }
 
 export default ProjectCard

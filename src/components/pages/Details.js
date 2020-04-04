@@ -49,7 +49,7 @@ const Details = () => {
   const { project: param } = useParams()
 
   const currentProjectIndex = filteredProjects.findIndex(
-    project => project.name === param.replace(/-/g, ' ').toUpperCase()
+    (project) => project.name === param.replace(/-/g, ' ').toUpperCase()
   )
 
   const currentProject = filteredProjects[currentProjectIndex]
@@ -66,7 +66,9 @@ const Details = () => {
   }
   return (
     <Section>
-      <H1 margin>{currentProject.name}</H1>
+      <H1 secondary margin>
+        {currentProject.name}
+      </H1>
       <P margin>{currentProject.date}</P>
       <ContentWrapper>
         <a
@@ -111,7 +113,7 @@ const Details = () => {
             TOOLS
           </H3>
           <ul css={gridUl}>
-            {currentProject.tools.map(tool =>
+            {currentProject.tools.map((tool) =>
               tool === 'Database' ? null : <li key={tool}>-{tool}</li>
             )}
           </ul>
