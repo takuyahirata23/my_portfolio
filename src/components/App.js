@@ -16,16 +16,16 @@ import { mqs, space } from './emotion-variables'
 const MainWrapper = styled.main`
   max-width: 120rem;
   margin: ${space.header.xs} auto 0;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   ${mqs.sm} {
-    padding: 5rem 2rem;
+    padding: 6rem 2rem;
   }
   ${mqs.md} {
     margin-top: ${space.header.md};
     padding: 7rem 2rem;
   }
   ${mqs.lg} {
-    padding: 9rem 2rem;
+    padding: 10rem 2rem;
   }
 `
 

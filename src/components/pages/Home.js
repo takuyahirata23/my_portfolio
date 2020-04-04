@@ -1,30 +1,53 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 import { P, Section } from './../atoms'
-import { space } from './../emotion-variables'
+import { colors, mqs, space } from './../emotion-variables'
 import { Testimonial } from '../organisms'
-import pic from './../../img/opening_animation.svg'
+import { H1 } from '../atoms'
+// import pic from './../../img/opening_animation.svg'
+const span = css`
+  font: italic bold 1.8rem montserrat;
+  background-color: ${colors.tertiary};
+  display: inline-block;
+  margin-bottom: ${space.margin.sm};
+  ${mqs.md} {
+    margin-bottom: ${space.margin.md};
+  }
+`
 
-//align with testimonial cards below
-const message = css`
-  padding: 0 ${space.padding.xs};
+const br = css`
+  ${mqs.sm} {
+    display: none;
+  }
+`
+const a = css`
+  font-weight: bold;
 `
 
 const Home = () => {
   return (
     <div>
       <Section>
-        <object data={pic} alt="image" type="image/svg+xml">
-          Image
-        </object>
-        <P css={message}>
+        <H1 margin>
+          Hi!
+          <br css={br} /> I'm Takuya Hirata
+        </H1>
+        <span css={span}>
+          SOFTWARE ENGINEER,
+          <br css={br} /> LIFELONG LEARNER
+        </span>
+        <P>
           Hi! Thank you for visiting my playground/portfolio site.
           <br />
-          Feel free to check <a href="https://github.com/Takuya-H23">
+          Feel free to check{' '}
+          <a css={a} href="https://github.com/Takuya-H23">
             my code
           </a>{' '}
-          and <a href="mailto:takuyahirata4@gmail.com">contact</a> me if your
-          are interested!
+          and{' '}
+          <a css={a} href="mailto:takuyahirata4@gmail.com">
+            contact
+          </a>{' '}
+          me if your are interested!
         </P>
       </Section>
 

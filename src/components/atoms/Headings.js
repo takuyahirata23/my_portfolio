@@ -2,12 +2,21 @@
 import PropTypes from 'prop-types'
 import { jsx } from '@emotion/core'
 import styled from '@emotion/styled'
-import { colors, fonts, space } from './../emotion-variables'
+import { colors, fonts, mqs, space } from './../emotion-variables'
 
 const Heading1 = styled.h1`
-  font: ${props => (props.secondary ? fonts.h1.secondary : fonts.h1.primary)};
+  font: ${(props) => (props.secondary ? fonts.h1.secondary : fonts.h1.primary)};
   color: ${colors.black};
-  margin-bottom: ${props => (props.margin ? space.margin.xs : 0)};
+  margin-bottom: ${(props) => (props.margin ? space.margin.xs : 0)};
+  ${mqs.sm} {
+    font-size: 3rem;
+  }
+  ${mqs.md} {
+    font-size: ${(props) => (props.secondary ? '3rem' : '3.3rem')};
+  }
+  ${mqs.lg} {
+    font-size: ${(props) => (props.secondary ? '3.3rem' : '5rem')};
+  }
 `
 
 export const H1 = ({ children, secondary = false, margin, ...props }) => {
@@ -19,13 +28,13 @@ export const H1 = ({ children, secondary = false, margin, ...props }) => {
 }
 
 H1.propTypes = {
-  children: PropTypes.string.isRequired
+  children: PropTypes.any.isRequired,
 }
 
 const Heading2 = styled.h2`
-  font: ${props => (props.secondary ? fonts.h2.secondary : fonts.h2.primary)};
+  font: ${(props) => (props.secondary ? fonts.h2.secondary : fonts.h2.primary)};
   color: ${colors.black};
-  margin-bottom: ${props => (props.margin ? space.margin.xs : 0)};
+  margin-bottom: ${(props) => (props.margin ? space.margin.xs : 0)};
 `
 
 export const H2 = ({ children, secondary = false, margin, ...props }) => {
@@ -37,18 +46,13 @@ export const H2 = ({ children, secondary = false, margin, ...props }) => {
 }
 
 H2.propTypes = {
-  children: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired,
 }
 
 const Heading3 = styled.h3`
-  font: ${props => (props.secondary ? fonts.h3.secondary : fonts.h3.primary)};
-  color: ${props =>
-    props.secondary
-      ? colors.secondary
-      : props.tertiary
-      ? colors.tertiary
-      : colors.black};
-  margin-bottom: ${props => (props.margin ? space.margin.xs : 0)};
+  font: ${(props) => (props.secondary ? fonts.h3.secondary : fonts.h3.primary)};
+  color: ${colors.black};
+  margin-bottom: ${(props) => (props.margin ? space.margin.xs : 0)};
 `
 
 export const H3 = ({
@@ -71,5 +75,5 @@ export const H3 = ({
 }
 
 H3.propTypes = {
-  children: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired,
 }
