@@ -18,7 +18,7 @@ const Grid = styled.div`
 `
 
 const h3 = css`
-  color: ${colors.tertiary};
+  color: ${colors.secondary};
 `
 
 const Todo = ({ children, title, text }) => {
@@ -38,7 +38,7 @@ const Todo = ({ children, title, text }) => {
 Todo.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
 }
 
 export default Todo

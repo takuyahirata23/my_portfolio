@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import takuya from './../../img/takuya_croped.jpg'
 import { MdContactMail } from 'react-icons/md'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
-import { Section, H1, H2, P } from './../atoms'
+import { Section, H2, P } from './../atoms'
 import { TodoList } from './../organisms'
 import { colors, mqs } from './../emotion-variables'
 
@@ -26,7 +26,7 @@ const infoWrapper = css`
 `
 
 const ImgWrapper = styled.div`
-  border: 1.4px solid ${colors.tertiary};
+  border: 1.4px solid ${colors.secondary};
   border-radius: 50%;
   padding: 0.8rem;
   width: 40%;
@@ -66,7 +66,7 @@ const Profile = () => {
           <ImgWrapper>
             <img src={takuya} alt="Takuya" />
           </ImgWrapper>
-          <H1>TAKUYA HIRATA</H1>
+          <H2>TAKUYA HIRATA</H2>
           <p>Software Engineer</p>
           <div>
             <a href="mailto:takuyahirata4@gmail.com">
