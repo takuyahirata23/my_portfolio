@@ -19,7 +19,7 @@ const testimonialText = css`
   line-height: 2;
 `
 const quoteIcon = css`
-  fill: ${colors.tertiary};
+  fill: ${colors.primary};
 `
 
 const Testimonials = () => {
