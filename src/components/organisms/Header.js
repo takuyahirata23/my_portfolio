@@ -47,7 +47,7 @@ const UlS = styled.ul`
   border: 2px solid ${colors.primary};
   transition: transform 0.4s ease-out;
   text-align: center;
-  transform: ${props =>
+  transform: ${(props) =>
     props.showMobileNav ? 'translateX(-100%)' : 'translate(0)'};
 
   ${mqs.md} {
