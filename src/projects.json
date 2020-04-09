@@ -2,7 +2,7 @@
   {
     "id": "8",
     "name": "GRAPHQL SERVER",
-    "overview": "GraphQL/Prisma server that allows this portfolio site to perform CRUD operation. Jest for testing.",
+    "overview": "GraphQL/Prisma server that allows this portfolio site to perform CRUD operation. Jest for testing. This API is currently not used to fetch any data",
     "objective": "Enable basic CRUD operation so this portfolio site can create, read, update, and delete projects as well as testimonials. Require authentication in order to perform CRUD operation except reading.",
     "tools": ["GraphQL", "Prisma", "Database", "PostgreSQL", "Node", "Jest"],
     "links": {
