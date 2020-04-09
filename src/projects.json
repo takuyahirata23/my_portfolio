@@ -12,6 +12,26 @@
     "date": "March 2020"
   },
   {
+    "id": "4",
+    "name": "PORTFOLIO SITE",
+    "overview": "Portfolio site as well as playground where I practice what I've learned.",
+    "objective": "Build a react application that is maintainable and scalable. Use \"useContext\" and \"useReducer\" for state management. Create design system using Emotion and Storybook",
+    "tools": [
+      "React",
+      "JavaScript",
+      "Emotion",
+      "Storybook",
+      "Sketch",
+      "Photoshop",
+      "Illustrator"
+    ],
+    "links": {
+      "project": "http://takuyahirata.com",
+      "git": "https://github.com/Takuya-H23/my_portfolio"
+    },
+    "date": "July 2019"
+  },
+  {
     "id": "7",
     "name": "STORYBOOK",
     "overview": "Storybook for this portfolio site",
@@ -23,6 +43,7 @@
     },
     "date": "March 2020"
   },
+
   {
     "id": "6",
     "name": "GITHUB FINDER",
@@ -32,25 +53,6 @@
     "links": {
       "project": "https://github-finder-23.netlify.com/",
       "git": "https://github.com/Takuya-H23/github-finder"
-    },
-    "date": "July 2019"
-  },
-  {
-    "id": "4",
-    "name": "PORTFOLIO SITE",
-    "overview": "Portfolio site using the latest React features.",
-    "objective": "Build a react application that is maintainable and scalable. Use \"useContext\" and \"useReducer\" for state management. Create design system using Emotion",
-    "tools": [
-      "React",
-      "JavaScript",
-      "Emotion",
-      "Sketch",
-      "Photoshop",
-      "Illustrator"
-    ],
-    "links": {
-      "project": "http://takuyahirata.com",
-      "git": "https://github.com/Takuya-H23/my_portfolio"
     },
     "date": "July 2019"
   },
@@ -65,29 +67,5 @@
       "git": "https://github.com/Takuya-H23/qa-rest"
     },
     "date": "June 2019"
-  },
-  {
-    "id": "2",
-    "name": "PREVIOUS PORTFOLIO SITE",
-    "overview": "My first portfolio site when I was a student in College.",
-    "objective": "Create a responsive website that is compatible with any browsers. Write maintainable code by using modern JavaScript and Sass",
-    "tools": ["HTML", "Sass", "JavaScript", "Photoshop", "Illustrator"],
-    "links": {
-      "project": "http://dev.takuyahirata.com",
-      "git": "https://github.com/Takuya-H23/portfolio"
-    },
-    "date": "May 2019"
-  },
-  {
-    "id": "1",
-    "name": "REAL TIME CHAT",
-    "overview": "Real time chat application using Socket.io and Node.js.",
-    "objective": "My first application using Socket.io. Create Node.js application and practice basic Node.js and Express skills and deploy onto live server.",
-    "tools": ["HTML", "CSS", "JavaScript", "Node", "Express"],
-    "links": {
-      "project": "https://chat-in-node.herokuapp.com/",
-      "git": "https://github.com/Takuya-H23/real-time-chat"
-    },
-    "date": "January 2019"
   }
 ]
