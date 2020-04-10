@@ -33,6 +33,7 @@ const App = () => {
   const { fetchProjects, isLoading } = useContext(ProjectContext)
   useEffect(() => {
     fetchProjects()
+    // eslint-disable-next-line
   }, [])
 
   if (isLoading) return <div>Loading...</div>

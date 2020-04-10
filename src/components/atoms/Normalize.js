@@ -19,7 +19,7 @@ const Normalize = () => {
         body {
           font-size: 1.6rem;
           font-family: montserrat;
-          background-color: ${colors.background};
+          background-color: ${colors.white};
         }
 
         ul {
