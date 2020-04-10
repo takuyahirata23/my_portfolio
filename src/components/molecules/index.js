@@ -1,5 +1,6 @@
+import Modal from './Modal'
 import ProjectCard from './ProjectCard'
 import Todo from './Todo'
 import Selection from './Selection'
 
-export { ProjectCard, Todo, Selection }
+export { Modal, ProjectCard, Todo, Selection }
