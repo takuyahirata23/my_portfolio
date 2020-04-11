@@ -1,28 +1,9 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core";
-import { P, Section } from "./../atoms";
-import { colors, mqs, space } from "./../emotion-variables";
-import { Testimonial } from "../organisms";
-import { H1 } from "../atoms";
-// import pic from './../../img/opening_animation.svg'
-const span = css`
-  font: italic bold 1.8rem montserrat;
-  background-color: ${colors.tertiary};
-  display: inline-block;
-  margin-bottom: ${space.margin.sm};
-  ${mqs.md} {
-    margin-bottom: ${space.margin.md};
-  }
-`;
-
-const br = css`
-  ${mqs.sm} {
-    display: none;
-  }
-`;
-const a = css`
-  font-weight: bold;
-`;
+import { jsx, css } from '@emotion/core'
+import { P, Section } from './../atoms'
+import { colors, mqs, space } from './../emotion-variables'
+import { Testimonial } from '../organisms'
+import { H1 } from '../atoms'
 
 const Home = () => {
   return (
@@ -39,21 +20,40 @@ const Home = () => {
         <P>
           Hi! Thank you for visiting my playground/portfolio site.
           <br />
-          Feel free to check{" "}
+          Feel free to check{' '}
           <a css={a} href="https://github.com/Takuya-H23">
             my code
-          </a>{" "}
-          and{" "}
+          </a>{' '}
+          and{' '}
           <a css={a} href="mailto:takuyahirata4@gmail.com">
             contact
-          </a>{" "}
+          </a>{' '}
           me if your are interested!
         </P>
       </Section>
 
       <Testimonial />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+const span = css`
+  font: italic bold 1.8rem montserrat;
+  background-color: ${colors.tertiary};
+  display: inline-block;
+  margin-bottom: ${space.margin.sm};
+  ${mqs.md} {
+    margin-bottom: ${space.margin.md};
+  }
+`
+
+const br = css`
+  ${mqs.sm} {
+    display: none;
+  }
+`
+const a = css`
+  font-weight: bold;
+`
+
+export default Home
