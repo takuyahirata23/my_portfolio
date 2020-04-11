@@ -1,21 +1,13 @@
 /** @jsx jsx */
-import { useState } from 'react'
 import { jsx, css } from '@emotion/core'
 import { P, Section } from './../atoms'
 import { colors, mqs, space } from './../emotion-variables'
 import { Testimonial } from '../organisms'
 import { H1 } from '../atoms'
-import { Modal } from '../molecules'
 
 const Home = () => {
-  const [showModal, setShowModal] = useState(true)
   return (
     <div>
-      {showModal && (
-        <Modal onClick={() => setShowModal(prevState => !prevState)}>
-          <p>aslkjdalskdjflk;asjdfl</p>
-        </Modal>
-      )}
       <Section>
         <H1 margin>
           Hi!
