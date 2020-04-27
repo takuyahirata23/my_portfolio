@@ -1,8 +1,8 @@
 [
   {
-    "id": "8",
-    "name": "GRAPHQL SERVER",
-    "overview": "GraphQL/Prisma server that allows this portfolio site to perform CRUD operation. Jest for testing. This API is currently not used to fetch any data",
+    "id": "1",
+    "name": "Portfolio GRAPHQL",
+    "overview": "GraphQL/Prisma that allows this portfolio site to perform CRUD operation. Jest for testing. This API is currently not used to fetch any data",
     "objective": "Enable basic CRUD operation so this portfolio site can create, read, update, and delete projects as well as testimonials. Require authentication in order to perform CRUD operation except reading.",
     "tools": ["GraphQL", "Prisma", "Database", "PostgreSQL", "Node", "Jest"],
     "links": {
@@ -12,7 +12,19 @@
     "date": "March 2020"
   },
   {
-    "id": "4",
+    "id": "2",
+    "name": "LET'S TALK GRAPHQL",
+    "overview": "GraphQL for Let's Talk application. Clients can use query and mutation on Post and Comment fields",
+    "objective": "Create GraphQL that is tested well in Jest. I have been developing client application in React and React that use this API",
+    "tools": ["GraphQL", "Prisma", "Database", "PostgreSQL", "Node", "Jest"],
+    "links": {
+      "project": "https://takuya-portfolio-prod.herokuapp.com/",
+      "git": "https://github.com/Takuya-H23/protfolio-backend"
+    },
+    "date": "April 2020"
+  },
+  {
+    "id": "3",
     "name": "PORTFOLIO SITE",
     "overview": "Portfolio site as well as playground where I practice what I've learned.",
     "objective": "Build a react application that is maintainable and scalable. Use \"useContext\" and \"useReducer\" for state management. Create design system using Emotion and Storybook",
@@ -32,7 +44,7 @@
     "date": "July 2019"
   },
   {
-    "id": "7",
+    "id": "4",
     "name": "STORYBOOK",
     "overview": "Storybook for this portfolio site",
     "objective": "Build design system to develop reuseable and scalable components.",
@@ -45,7 +57,7 @@
   },
 
   {
-    "id": "6",
+    "id": "5",
     "name": "GITHUB FINDER",
     "overview": "To search for github users and their public repositories. React Hooks are used for state management",
     "objective": "To implement React Hooks such as useState, useEffect, useContext and useReducer. Consider when to use Redux or Hooks for state management. Practice how to keep information such as API keys safe.",
@@ -55,17 +67,5 @@
       "git": "https://github.com/Takuya-H23/github-finder"
     },
     "date": "July 2019"
-  },
-  {
-    "id": "5",
-    "name": "Q&A REST API",
-    "overview": "REST API for Q&A sites. Handles post/delete questions, answer questions, vote/edit answers.",
-    "objective": "Build REST API using Node.js, Express.js, MongoDB and Mongoose. Practice creating schema and Model, handling errors, and providing proper data and status code.",
-    "tools": ["Node", "Express", "Database", "MongoDB", "Mongoose"],
-    "links": {
-      "project": "null",
-      "git": "https://github.com/Takuya-H23/qa-rest"
-    },
-    "date": "June 2019"
   }
 ]
