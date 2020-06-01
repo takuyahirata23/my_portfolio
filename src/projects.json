@@ -13,9 +13,21 @@
   },
   {
     "id": "2",
+    "name": "LET'S TALK REACT",
+    "overview": "React app that consumes Let's Talk GRAPHQL api where you can create posts as well as comments. Please provide a key to create one so you can edit/delete your contents",
+    "objective": "Create simple design system and write functions in functional style",
+    "tools": ["React", "Emotion", "Ramda"],
+    "links": {
+      "project": "https://lets-talk-react.netlify.app/",
+      "git": "https://github.com/Takuya-H23/lets-talk-react"
+    },
+    "date": "Jun 2020"
+  },
+  {
+    "id": "3",
     "name": "LET'S TALK GRAPHQL",
     "overview": "GraphQL for Let's Talk application. Clients can use query and mutation on Post and Comment fields",
-    "objective": "Create GraphQL that is tested well in Jest. I have been developing client applications in React and React that use this API",
+    "objective": "Create GraphQL api that is tested well in Jest. Build a full stack application. You can query this api form the link below or go to Let's Talk React app",
     "tools": ["GraphQL", "Prisma", "Database", "PostgreSQL", "Node", "Jest"],
     "links": {
       "project": "https://lets-talk-node.herokuapp.com/",
@@ -24,7 +36,7 @@
     "date": "April 2020"
   },
   {
-    "id": "3",
+    "id": "4",
     "name": "PORTFOLIO SITE",
     "overview": "Portfolio site as well as playground where I practice what I've learned.",
     "objective": "Build a react application that is maintainable and scalable. Use \"useContext\" and \"useReducer\" for state management. Create design system using Emotion and Storybook",
@@ -44,7 +56,7 @@
     "date": "July 2019"
   },
   {
-    "id": "4",
+    "id": "5",
     "name": "STORYBOOK",
     "overview": "Storybook for this portfolio site",
     "objective": "Build design system to develop reuseable and scalable components.",
@@ -57,7 +69,7 @@
   },
 
   {
-    "id": "5",
+    "id": "6",
     "name": "GITHUB FINDER",
     "overview": "To search for github users and their public repositories. React Hooks are used for state management",
     "objective": "To implement React Hooks such as useState, useEffect, useContext and useReducer. Consider when to use Redux or Hooks for state management. Practice how to keep information such as API keys safe.",
