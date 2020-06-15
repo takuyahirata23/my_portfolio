@@ -37,14 +37,21 @@ const Option = styled.div`
 
 const Selection = () => {
   const { filter, setFilter } = useContext(ProjectContext)
-  const options = ['All', 'React', 'Node', 'GraphQL', 'Database']
+  const options = [
+    'All',
+    'React',
+    'Functional Programming',
+    'GraphQL',
+    'Node',
+    'Database',
+  ]
 
   return (
     <SelectionWrapper>
       {options.map(option => (
         <Option
-          option={option.toLowerCase()}
-          active={option.toLocaleLowerCase() === filter}
+          option={option.toLowerCase().replace(/ /g, '')}
+          active={option.toLocaleLowerCase().replace(/ /g, '') === filter}
           key={option}
           onClick={() => setFilter(option.toLowerCase())}
         >
