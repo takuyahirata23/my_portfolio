@@ -18,16 +18,25 @@ const grid = css`
 `
 
 const ToolBullets = ({ name, tools }) => {
-  const toolsExist = ['node', 'database', 'react', 'graphql']
+  const toolsExist = [
+    'node',
+    'database',
+    'react',
+    'graphql',
+    'functionalprogramming',
+  ]
   const filteredTools = tools.filter(tool =>
-    toolsExist.includes(tool.toLowerCase())
+    toolsExist.includes(tool.toLowerCase().replace(/ /g, ''))
   )
 
   if (filteredTools.length) {
     return (
       <Grid css={grid}>
         {filteredTools.map(tool => (
-          <Tool key={`${name}-{${tool}}`} tool={tool.toLowerCase()} />
+          <Tool
+            key={`${name}-{${tool}}`}
+            tool={tool.toLowerCase().replace(/ /g, '')}
+          />
         ))}
       </Grid>
     )
@@ -38,7 +47,7 @@ const ToolBullets = ({ name, tools }) => {
 
 ToolBullets.propTypes = {
   tools: PropTypes.array.isRequired,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 }
 
 export default ToolBullets

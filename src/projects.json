@@ -1,17 +1,5 @@
 [
   {
-    "id": "1",
-    "name": "PORTFOLIO GRAPHQL",
-    "overview": "GraphQL/Prisma that allows this portfolio site to perform CRUD operation. Jest for testing. This API is currently not used to fetch any data",
-    "objective": "Enable basic CRUD operation so this portfolio site can create, read, update, and delete projects as well as testimonials. Require authentication in order to perform CRUD operation except reading.",
-    "tools": ["GraphQL", "Prisma", "Database", "PostgreSQL", "Node", "Jest"],
-    "links": {
-      "project": "https://takuya-portfolio-prod.herokuapp.com/",
-      "git": "https://github.com/Takuya-H23/protfolio-backend"
-    },
-    "date": "March 2020"
-  },
-  {
     "id": "2",
     "name": "LET'S TALK REACT",
     "overview": "React app that consumes Let's Talk GRAPHQL api where you can create posts as well as comments. Please provide a key to create one so you can edit/delete your contents",
@@ -22,6 +10,18 @@
       "git": "https://github.com/Takuya-H23/lets-talk-react"
     },
     "date": "Jun 2020"
+  },
+  {
+    "id": "1",
+    "name": "PORTFOLIO GRAPHQL",
+    "overview": "GraphQL/Prisma that allows this portfolio site to perform CRUD operation. Jest for testing. This API is currently not used to fetch any data",
+    "objective": "Enable basic CRUD operation so this portfolio site can create, read, update, and delete projects as well as testimonials. Require authentication in order to perform CRUD operation except reading",
+    "tools": ["GraphQL", "Prisma", "Database", "PostgreSQL", "Node", "Jest"],
+    "links": {
+      "project": "https://takuya-portfolio-prod.herokuapp.com/",
+      "git": "https://github.com/Takuya-H23/protfolio-backend"
+    },
+    "date": "March 2020"
   },
   {
     "id": "3",
@@ -38,7 +38,7 @@
   {
     "id": "4",
     "name": "PORTFOLIO SITE",
-    "overview": "Portfolio site as well as playground where I practice what I've learned.",
+    "overview": "Portfolio site as well as playground where I practice what I've learned",
     "objective": "Build a react application that is maintainable and scalable. Use \"useContext\" and \"useReducer\" for state management. Create design system using Emotion and Storybook",
     "tools": [
       "React",
@@ -59,7 +59,7 @@
     "id": "5",
     "name": "STORYBOOK",
     "overview": "Storybook for this portfolio site",
-    "objective": "Build design system to develop reuseable and scalable components.",
+    "objective": "Build a design system to develop reuseable and scalable components",
     "tools": ["React", "Storybook"],
     "links": {
       "project": "https://takuyahirata-storybook.netlify.com",
@@ -67,12 +67,29 @@
     },
     "date": "March 2020"
   },
-
+  {
+    "id": "functional-todo",
+    "name": "FUNCTIONAL TODO",
+    "overview": "Todo app. This is my first step to be a functional programmer",
+    "objective": "Practice functional programming. Techniques I was practicing were Monad, Point Free, Curring, and Composing",
+    "tools": [
+      "React",
+      "Emotion",
+      "Ramda",
+      "Folktale",
+      "Functional Programming"
+    ],
+    "links": {
+      "project": "https://functional-todo.netlify.app/",
+      "git": "https://github.com/Takuya-H23/functional-todo"
+    },
+    "date": "June 2020"
+  },
   {
     "id": "6",
     "name": "GITHUB FINDER",
     "overview": "To search for github users and their public repositories. React Hooks are used for state management",
-    "objective": "To implement React Hooks such as useState, useEffect, useContext and useReducer. Consider when to use Redux or Hooks for state management. Practice how to keep information such as API keys safe.",
+    "objective": "To implement React Hooks such as useState, useEffect, useContext and useReducer. Consider when to use Redux or Hooks for state management. Practice how to keep information such as API keys safe",
     "tools": ["React", "Github API"],
     "links": {
       "project": "https://github-finder-23.netlify.com/",

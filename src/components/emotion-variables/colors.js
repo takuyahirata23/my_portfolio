@@ -13,4 +13,5 @@ export default {
   node: '#0c8e63',
   graphql: '#cb4700',
   database: '#eda506',
+  functionalprogramming: 'tomato',
 }
