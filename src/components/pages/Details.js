@@ -9,47 +9,12 @@ import NotFound from './NotFound'
 import { Section, H1, H3, P, Grid } from './../atoms'
 import { colors, mqs, space } from './../emotion-variables'
 
-const linkText = css`
-  color: ${colors.primary};
-  vertical-align: middle;
-  margin-right: 0.8rem;
-`
-
-const back = css`
-  margin-right: 1rem;
-`
-
-const arrow = css`
-  color: ${colors.primary};
-  vertical-align: middle;
-`
-
-const ContentWrapper = styled.div`
-  margin-bottom: 4rem;
-`
-
-const grid = css`
-  row-gap: 3rem;
-  grid-template-columns: 1fr;
-  margin-bottom: ${space.margin.dividerXs};
-  ${mqs.lg} {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0 5rem;
-  }
-`
-
-const gridUl = css`
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, 15rem);
-`
-
 const Details = () => {
   const { filteredProjects, isLoading } = useContext(ProjectContext)
   const { project: param } = useParams()
 
   const currentProjectIndex = filteredProjects.findIndex(
-    (project) => project.name === param.replace(/-/g, ' ').toUpperCase()
+    project => project.name === param.replace(/-/g, ' ').toUpperCase()
   )
 
   const currentProject = filteredProjects[currentProjectIndex]
@@ -58,7 +23,6 @@ const Details = () => {
     window.scrollTo(0, 0)
   }, [])
 
-  console.log(isLoading, currentProject)
   if (isLoading || !currentProject) return <div>Loading...</div>
   // make sure the project exists
   if (currentProject === -1) {
@@ -113,7 +77,7 @@ const Details = () => {
             TOOLS
           </H3>
           <ul css={gridUl}>
-            {currentProject.tools.map((tool) =>
+            {currentProject.tools.map(tool =>
               tool === 'Database' ? null : <li key={tool}>-{tool}</li>
             )}
           </ul>
@@ -130,4 +94,38 @@ const Details = () => {
   )
 }
 
+const linkText = css`
+  color: ${colors.primary};
+  vertical-align: middle;
+  margin-right: 0.8rem;
+`
+
+const back = css`
+  margin-right: 1rem;
+`
+
+const arrow = css`
+  color: ${colors.primary};
+  vertical-align: middle;
+`
+
+const ContentWrapper = styled.div`
+  margin-bottom: 4rem;
+`
+
+const grid = css`
+  row-gap: 3rem;
+  grid-template-columns: 1fr;
+  margin-bottom: ${space.margin.dividerXs};
+  ${mqs.lg} {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 5rem;
+  }
+`
+
+const gridUl = css`
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, 15rem);
+`
 export default Details

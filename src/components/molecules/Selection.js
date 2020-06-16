@@ -5,6 +5,33 @@ import { useContext } from 'react'
 import { ProjectContext } from '../../context/projects/ProjectContext'
 import { colors } from '../emotion-variables'
 
+const Selection = () => {
+  const { filter, setFilter } = useContext(ProjectContext)
+  const options = [
+    'All',
+    'React',
+    'Functional Programming',
+    'GraphQL',
+    'Node',
+    'Database',
+  ]
+
+  return (
+    <SelectionWrapper>
+      {options.map(option => (
+        <Option
+          option={option.toLowerCase().replace(/ /g, '')}
+          active={option.toLocaleLowerCase() === filter}
+          key={option}
+          onClick={() => setFilter(option.toLowerCase())}
+        >
+          {option}
+        </Option>
+      ))}
+    </SelectionWrapper>
+  )
+}
+
 const SelectionWrapper = styled.div`
   border-bottom: 1px solid ${colors.border};
   display: flex;
@@ -34,31 +61,4 @@ const Option = styled.div`
     height: 0.8rem;
   }
 `
-
-const Selection = () => {
-  const { filter, setFilter } = useContext(ProjectContext)
-  const options = [
-    'All',
-    'React',
-    'Functional Programming',
-    'GraphQL',
-    'Node',
-    'Database',
-  ]
-
-  return (
-    <SelectionWrapper>
-      {options.map(option => (
-        <Option
-          option={option.toLowerCase().replace(/ /g, '')}
-          active={option.toLocaleLowerCase().replace(/ /g, '') === filter}
-          key={option}
-          onClick={() => setFilter(option.toLowerCase())}
-        >
-          {option}
-        </Option>
-      ))}
-    </SelectionWrapper>
-  )
-}
 export default Selection
