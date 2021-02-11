@@ -5,8 +5,8 @@ import styled from '@emotion/styled'
 import { space } from '../emotion-variables'
 
 interface Props {
-  children: React.ReactChild,
-  margin: boolean;
+  children: React.ReactNode,
+  margin?: boolean;
 }
 
 
