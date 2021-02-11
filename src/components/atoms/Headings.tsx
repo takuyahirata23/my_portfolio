@@ -1,10 +1,31 @@
 /** @jsx jsx */
+import React from 'react'
 import PropTypes from 'prop-types'
 import { jsx } from '@emotion/core'
 import styled from '@emotion/styled'
-import { colors, fonts, mqs, space } from './../emotion-variables'
+import { colors, fonts, mqs, space } from '../emotion-variables'
 
-const Heading1 = styled.h1`
+interface StyleProps {
+  secondary?: boolean,
+  margin?: boolean 
+  tertiary?: boolean
+}
+
+interface Props {
+  children: React.ReactNode,
+}
+
+
+
+export const H1: React.FC<Props & StyleProps> = ({ children, secondary = false, margin, ...props }) => {
+  return (
+    <Heading1 secondary={secondary} margin={margin} {...props}>
+      {children}
+    </Heading1>
+  )
+}
+
+const Heading1 = styled.h1<StyleProps>`
   font: ${(props) => (props.secondary ? fonts.h1.secondary : fonts.h1.primary)};
   color: ${colors.black};
   margin-bottom: ${(props) => (props.margin ? space.margin.xs : 0)};
@@ -19,25 +40,9 @@ const Heading1 = styled.h1`
   }
 `
 
-export const H1 = ({ children, secondary = false, margin, ...props }) => {
-  return (
-    <Heading1 secondary={secondary} margin={margin} {...props}>
-      {children}
-    </Heading1>
-  )
-}
 
-H1.propTypes = {
-  children: PropTypes.any.isRequired,
-}
 
-const Heading2 = styled.h2`
-  font: ${(props) => (props.secondary ? fonts.h2.secondary : fonts.h2.primary)};
-  color: ${colors.black};
-  margin-bottom: ${(props) => (props.margin ? space.margin.xs : 0)};
-`
-
-export const H2 = ({ children, secondary = false, margin, ...props }) => {
+export const H2: React.FC<Props & StyleProps> = ({ children, secondary = false, margin, ...props }) => {
   return (
     <Heading2 secondary={secondary} margin={margin} {...props}>
       {children}
@@ -45,17 +50,14 @@ export const H2 = ({ children, secondary = false, margin, ...props }) => {
   )
 }
 
-H2.propTypes = {
-  children: PropTypes.string.isRequired,
-}
-
-const Heading3 = styled.h3`
-  font: ${(props) => (props.secondary ? fonts.h3.secondary : fonts.h3.primary)};
+const Heading2 = styled.h2<StyleProps>`
+  font: ${(props) => (props.secondary ? fonts.h2.secondary : fonts.h2.primary)};
   color: ${colors.black};
   margin-bottom: ${(props) => (props.margin ? space.margin.xs : 0)};
 `
 
-export const H3 = ({
+
+export const H3: React.FC<Props & StyleProps> = ({
   children,
   secondary = false,
   tertiary,
@@ -73,6 +75,13 @@ export const H3 = ({
     </Heading3>
   )
 }
+
+
+const Heading3 = styled.h3<StyleProps>`
+  font: ${(props) => (props.secondary ? fonts.h3.secondary : fonts.h3.primary)};
+  color: ${colors.black};
+  margin-bottom: ${(props) => (props.margin ? space.margin.xs : 0)};
+`
 
 H3.propTypes = {
   children: PropTypes.string.isRequired,

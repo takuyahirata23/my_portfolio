@@ -10,9 +10,6 @@ interface Props  {
   tools: Array<string>; 
 } 
 
-type toolsType = 'node' | 'database' | 'react' | 'graphql' | 'functionalprogramming'
-// type toolsType = [key: 'node' | 'database' | 'react' | 'graphql' | 'functionalprogramming']
-
 const toolsExist = [
   'node',
   'database',
