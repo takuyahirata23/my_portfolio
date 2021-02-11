@@ -1,7 +1,7 @@
 import React from 'react'
 import { Global, css } from '@emotion/core'
 import emotionNormalize from 'emotion-normalize'
-import { colors } from './../emotion-variables'
+import { colors } from '../emotion-variables'
 
 const Normalize = () => {
   return (
