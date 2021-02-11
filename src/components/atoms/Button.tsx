@@ -1,17 +1,26 @@
 /** @jsx jsx */
-import PropTypes from 'prop-types'
+import React from 'react'
 import { jsx } from '@emotion/core'
 import styled from '@emotion/styled'
 import { colors, mqs } from '../emotion-variables'
 
-function Button({
+interface Props {
+  children: React.ReactChild;
+  center: boolean;
+  onClick: () => void;
+  type: 'button' | 'submit';
+  disabled: boolean;
+  secondary: boolean;
+}
+
+const Button:React.FC<Props> = ({
   center = true,
   children,
   onClick,
   type = 'button',
   disabled = false,
   secondary = false,
-}) {
+}) =>  {
   return (
     <StyledButton
       center={center}
@@ -25,7 +34,7 @@ function Button({
   )
 }
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<{center: boolean, secondary: boolean, disabled: boolean}>`
   background-color: ${props =>
     props.secondary ? colors.white : colors.secondary};
   border: ${props =>
@@ -59,11 +68,4 @@ const StyledButton = styled.button`
   }
 `
 
-Button.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
-  onClick: PropTypes.func.isRequired,
-}
 export default Button
