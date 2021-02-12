@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { useEffect, useContext } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import { ProjectContext } from './../context/projects/ProjectContext'
+import { ProjectContext } from '../context/projects/ProjectContext'
 import { jsx } from '@emotion/core'
 import styled from '@emotion/styled'
 import { Normalize } from './atoms'
@@ -13,24 +13,10 @@ import Details from './pages/Details'
 import NotFound from './pages/NotFound'
 import { mqs, space } from './emotion-variables'
 
-const MainWrapper = styled.main`
-  max-width: 120rem;
-  margin: ${space.header.xs} auto 0;
-  padding: 5rem 2rem;
-  ${mqs.sm} {
-    padding: 6rem 2rem;
-  }
-  ${mqs.md} {
-    margin-top: ${space.header.md};
-    padding: 7rem 2rem;
-  }
-  ${mqs.lg} {
-    padding: 10rem 2rem;
-  }
-`
 
-const App = () => {
+const App: React.FC = () => {
   const { fetchProjects, isLoading } = useContext(ProjectContext)
+
   useEffect(() => {
     fetchProjects()
     // eslint-disable-next-line
@@ -56,5 +42,21 @@ const App = () => {
     </BrowserRouter>
   )
 }
+
+const MainWrapper = styled.main`
+  max-width: 120rem;
+  margin: ${space.header.xs} auto 0;
+  padding: 5rem 2rem;
+  ${mqs.sm} {
+    padding: 6rem 2rem;
+  }
+  ${mqs.md} {
+    margin-top: ${space.header.md};
+    padding: 7rem 2rem;
+  }
+  ${mqs.lg} {
+    padding: 10rem 2rem;
+  }
+`
 
 export default App
