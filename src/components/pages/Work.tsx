@@ -1,10 +1,11 @@
 /** @jsx jsx */
+import React from 'react'
 import { jsx } from '@emotion/core'
 import { Section, P } from '../atoms'
 import Selection from '../molecules/Selection'
-import { ProjectCardList } from './../organisms'
+import { ProjectCardList } from '../organisms'
 
-const Work = () => {
+const Work: React.FC = () => {
   return (
     <Section>
       <P margin>These are some projects I have developed.</P>

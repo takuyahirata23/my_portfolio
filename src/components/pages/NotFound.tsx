@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NotFound = () => (
+const NotFound: React.FC = () => (
   <section className="section-wrapper">
     <h1>404 NOT FOUND</h1>
   </section>

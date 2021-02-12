@@ -1,11 +1,12 @@
 /** @jsx jsx */
+import React from 'react'
 import { jsx, css } from '@emotion/core'
-import { P, Section } from './../atoms'
-import { colors, mqs, space } from './../emotion-variables'
+import { P, Section } from '../atoms'
+import { colors, mqs, space } from '../emotion-variables'
 import { Testimonial } from '../organisms'
 import { H1 } from '../atoms'
 
-const Home = () => {
+const Home:React.FC = () => {
   return (
     <div>
       <Section>

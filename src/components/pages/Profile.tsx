@@ -1,14 +1,15 @@
 /** @jsx jsx */
+import React from 'react'
 import { jsx, css } from '@emotion/core'
 import styled from '@emotion/styled'
 import takuya from './../../img/takuya_croped.jpg'
 import { MdContactMail } from 'react-icons/md'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
-import { Section, H2, P } from './../atoms'
-import { TodoList } from './../organisms'
-import { colors, mqs } from './../emotion-variables'
+import { Section, H2, P } from '../atoms'
+import { TodoList } from '../organisms'
+import { colors, mqs } from '../emotion-variables'
 
-const Profile = () => {
+const Profile: React.FC = () => {
   return (
     <div>
       <Section css={[grid, profileWrapper]}>
