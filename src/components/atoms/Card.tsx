@@ -4,7 +4,7 @@ import { jsx } from '@emotion/core'
 import styled from '@emotion/styled'
 
 interface Props {
-  children: React.ReactChild
+  children: React.ReactNode
 }
 
 

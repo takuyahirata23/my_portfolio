@@ -4,7 +4,7 @@ import { jsx } from '@emotion/core'
 import styled from '@emotion/styled'
 import { mqs, space } from '../emotion-variables'
 
-const Section: React.FC<{ children: React.ReactChild}> = ({ children, ...props }) => (
+const Section: React.FC<{ children: React.ReactNode}> = ({ children, ...props }) => (
   <Wrapper {...props}>{children}</Wrapper>
 )
 
