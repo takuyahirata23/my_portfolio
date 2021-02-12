@@ -15,6 +15,7 @@ import { mqs, space } from './emotion-variables'
 
 
 const App: React.FC = () => {
+  //@ts-ignore
   const { fetchProjects, isLoading } = useContext(ProjectContext)
 
   useEffect(() => {

@@ -42,7 +42,7 @@
     "objective": "Build a react application that is maintainable and scalable. Use \"useContext\" and \"useReducer\" for state management. Create design system using Emotion and Storybook",
     "tools": [
       "React",
-      "JavaScript",
+     "TypeScript",
       "Emotion",
       "Storybook",
       "Sketch",
@@ -74,9 +74,10 @@
     "objective": "Practice functional programming. Techniques I was practicing were Monad, Point Free, Curring, and Composing",
     "tools": [
       "React",
+      "TypeScript",
       "Emotion",
       "Ramda",
-      "Folktale",
+      "FP-TS",
       "Functional Programming"
     ],
     "links": {

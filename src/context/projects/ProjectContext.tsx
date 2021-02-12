@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from 'react'
 import projectReducer from './projectReducer'
 import { SET_IS_LOADING, FETCH_DATA_SUCCESS, SET_FILTER } from './actionType'
-import arrayOfProjects from './../../projects.json'
+import arrayOfProjects from '../../projects.json'
 
 const initialState = {
   isLoading: false,
@@ -10,13 +10,9 @@ const initialState = {
   filter: 'all'
 }
 
-// function makeAPICall() {
-//   return arrayOfProjects
-// }
-
 export const ProjectContext = createContext(initialState)
 
-export const ProjectProvider = ({ children }) => {
+export const ProjectProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {
   const [state, dispatch] = useReducer(projectReducer, initialState)
 
   function setIsLoading(bool) {
@@ -24,8 +20,7 @@ export const ProjectProvider = ({ children }) => {
   }
 
   function fetchProjects() {
-    dispatch(() => setIsLoading(true))
-    // const projects = makeAPICall()
+    setIsLoading(true)
     dispatch({ type: FETCH_DATA_SUCCESS, projects: arrayOfProjects })
   }
 
@@ -40,6 +35,7 @@ export const ProjectProvider = ({ children }) => {
         filteredProjects: state.filteredProjects,
         projects: state.projects,
         filter: state.filter,
+        //@ts-ignore
         setFilter,
         fetchProjects
       }}

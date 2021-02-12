@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import styled from '@emotion/styled'
-import { useContext } from 'react'
+import {  useContext } from 'react'
 import { ProjectContext } from '../../context/projects/ProjectContext'
 import { colors } from '../emotion-variables'
 
@@ -15,7 +15,8 @@ const options = [
 ]
 
 const Selection: React.FC = () => {
-  const { filter, setFilter } = useContext(ProjectContext)
+  //@ts-ignore
+  const { filter, setFilter } = useContext(ProjectContext) 
 
   return (
     <SelectionWrapper>
