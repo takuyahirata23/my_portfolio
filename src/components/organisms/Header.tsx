@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import React from 'react'
 import { useState } from 'react'
 import { jsx, css } from '@emotion/core'
 import styled from '@emotion/styled'
@@ -7,6 +8,40 @@ import { mqs, colors } from '../emotion-variables'
 import { NavLink } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { Logo } from '../atoms'
+
+
+const Header: React.FC = () => {
+  const [showMobileNav, setShowMobileNav] = useState(false)
+  return (
+    <HeaderS>
+      <Link to="/">
+        <Logo />
+      </Link>
+      <nav>
+        <HamburgerMenuWrapper onClick={() => setShowMobileNav(!showMobileNav)}>
+          {showMobileNav ? (
+            <FaTimes css={hamburgerMenuIcon} />
+          ) : (
+            <FaBars css={hamburgerMenuIcon} />
+          )}
+        </HamburgerMenuWrapper>
+        <UlS showMobileNav={showMobileNav}>
+          <LiS onClick={() => setShowMobileNav(false)}>
+            <NavLink exact to="/">
+              HOME
+            </NavLink>
+          </LiS>
+          <LiS onClick={() => setShowMobileNav(false)}>
+            <NavLink to="/work">WORK</NavLink>
+          </LiS>
+          <LiS onClick={() => setShowMobileNav(false)}>
+            <NavLink to="/profile">PROFILE</NavLink>
+          </LiS>
+        </UlS>
+      </nav>
+    </HeaderS>
+  )
+}
 
 const HeaderS = styled.header`
   background-color: ${colors.primary};
@@ -36,7 +71,7 @@ const hamburgerMenuIcon = css`
   font-size: 2.3rem;
 `
 
-const UlS = styled.ul`
+const UlS = styled.ul<{ showMobileNav?: boolean}>`
   position: fixed;
   padding-top: 2rem;
   top: 5.6rem;
@@ -74,38 +109,5 @@ const LiS = styled.li`
     }
   }
 `
-
-const Header = () => {
-  const [showMobileNav, setShowMobileNav] = useState(false)
-  return (
-    <HeaderS>
-      <Link to="/">
-        <Logo />
-      </Link>
-      <nav>
-        <HamburgerMenuWrapper onClick={() => setShowMobileNav(!showMobileNav)}>
-          {showMobileNav ? (
-            <FaTimes css={hamburgerMenuIcon} />
-          ) : (
-            <FaBars css={hamburgerMenuIcon} />
-          )}
-        </HamburgerMenuWrapper>
-        <UlS showMobileNav={showMobileNav}>
-          <LiS onClick={() => setShowMobileNav(false)}>
-            <NavLink exact to="/">
-              HOME
-            </NavLink>
-          </LiS>
-          <LiS onClick={() => setShowMobileNav(false)}>
-            <NavLink to="/work">WORK</NavLink>
-          </LiS>
-          <LiS onClick={() => setShowMobileNav(false)}>
-            <NavLink to="/profile">PROFILE</NavLink>
-          </LiS>
-        </UlS>
-      </nav>
-    </HeaderS>
-  )
-}
 
 export default Header
