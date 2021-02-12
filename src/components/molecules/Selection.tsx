@@ -5,16 +5,17 @@ import { useContext } from 'react'
 import { ProjectContext } from '../../context/projects/ProjectContext'
 import { colors } from '../emotion-variables'
 
-const Selection = () => {
+const options = [
+  'All',
+  'React',
+  'Functional Programming',
+  'GraphQL',
+  'Node',
+  'Database',
+]
+
+const Selection: React.FC = () => {
   const { filter, setFilter } = useContext(ProjectContext)
-  const options = [
-    'All',
-    'React',
-    'Functional Programming',
-    'GraphQL',
-    'Node',
-    'Database',
-  ]
 
   return (
     <SelectionWrapper>
@@ -38,7 +39,7 @@ const SelectionWrapper = styled.div`
   flex-wrap: wrap;
 `
 
-const Option = styled.div`
+const Option = styled.div<{active: boolean, option: string}>`
   cursor: pointer;
   margin-bottom: 1rem;
   margin-right: 2.5rem;
