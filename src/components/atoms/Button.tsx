@@ -6,11 +6,11 @@ import { colors, mqs } from '../emotion-variables'
 
 interface Props {
   children: React.ReactChild;
-  center: boolean;
+  center?: boolean;
   onClick: () => void;
-  type: 'button' | 'submit';
-  disabled: boolean;
-  secondary: boolean;
+  type?: 'button' | 'submit';
+  disabled?: boolean;
+  secondary?: boolean;
 }
 
 const Button:React.FC<Props> = ({

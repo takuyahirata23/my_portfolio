@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import PropTypes from 'prop-types'
+import React from 'react'
 import { jsx, keyframes } from '@emotion/core'
 import { useEffect, useRef } from 'react'
 import styled from '@emotion/styled'
@@ -7,7 +7,15 @@ import { createPortal } from 'react-dom'
 import { Button } from '../atoms'
 import { colors, mqs, space } from '../emotion-variables'
 
-function Modal({ onClick, center, children, type, disabled }) {
+interface Props {
+  onClick: () => void,
+  center?: boolean,
+  children: React.ReactNode,
+  type?: 'button' | 'submit',
+  disabled?: boolean
+}
+
+const  Modal: React.FC<Props> = ({ onClick, center, children, type, disabled }) => {
   const elRef = useRef(null)
 
   if (!elRef.current) {
@@ -42,16 +50,6 @@ function Modal({ onClick, center, children, type, disabled }) {
   )
 }
 
-Modal.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  center: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
-  type: PropTypes.string,
-  disabled: PropTypes.bool,
-}
 
 const opacityAnimation = keyframes`
   from {
