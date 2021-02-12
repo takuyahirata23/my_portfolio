@@ -1,9 +1,29 @@
 /** @jsx jsx */
-import PropTypes from 'prop-types'
+import React from 'react'
 import { jsx, css } from '@emotion/core'
 import styled from '@emotion/styled'
 import { H3, P } from '../atoms'
 import { colors, mqs } from '../emotion-variables'
+
+interface Props {
+  children: React.ReactNode,
+  title: string,
+  text: React.ReactNode 
+}
+
+const Todo: React.FC<Props>= ({ children, title, text }) => {
+  return (
+    <Grid>
+      {children}
+      <div>
+        <H3 css={h3} margin>
+          {title}
+        </H3>
+        <P>{text}</P>
+      </div>
+    </Grid>
+  )
+}
 
 const Grid = styled.div`
   display: grid;
@@ -20,25 +40,5 @@ const Grid = styled.div`
 const h3 = css`
   color: ${colors.secondary};
 `
-
-const Todo = ({ children, title, text }) => {
-  return (
-    <Grid>
-      {children}
-      <div>
-        <H3 css={h3} margin>
-          {title}
-        </H3>
-        <P>{text}</P>
-      </div>
-    </Grid>
-  )
-}
-
-Todo.propTypes = {
-  children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-}
 
 export default Todo
